@@ -22,7 +22,15 @@ const categoryColors: Record<Update["category"], string> = {
   product: "bg-border text-foreground",
 };
 
+function addUtmParams(url: string, source: string): string {
+  if (!url) return url;
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}utm_source=aitimeline&utm_medium=referral&utm_campaign=daily`;
+}
+
 export default function TimelineItem({ item }: { item: Update }) {
+  const linkUrl = item.url ? addUtmParams(item.url, item.source) : undefined;
+  
   return (
     <article className="timeline-item group">
       <div className="flex items-center gap-3 mb-2">
@@ -34,8 +42,8 @@ export default function TimelineItem({ item }: { item: Update }) {
         <span className="text-sm text-muted">{item.source}</span>
       </div>
       <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-accent transition-colors">
-        {item.url ? (
-          <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+        {linkUrl ? (
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
             {item.title}
           </a>
         ) : (
