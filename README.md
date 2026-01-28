@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI Timeline
 
-## Getting Started
+Daily updates from the AI world. Automatically curated.
 
-First, run the development server:
+## Design Guidelines
+
+- No blues, no purples, no gradients
+- Warm earth tones with coral accent (#e85d4c)
+- Unexpected font pairing: Inter + Space Grotesk
+- Clean, minimal timeline layout
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Build
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Data Structure
 
-## Learn More
+Updates stored in `src/data/updates.json`:
 
-To learn more about Next.js, take a look at the following resources:
+```json
+{
+  "id": "unique-id",
+  "date": "YYYY-MM-DD",
+  "title": "Headline",
+  "description": "Details",
+  "source": "Company/Lab",
+  "url": "https://...",
+  "category": "model|lab|research|product"
+}
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Static export to `dist/` folder. Deploy to Vercel, Netlify, or GitHub Pages.
 
-## Deploy on Vercel
+## Daily Automation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Cron job runs daily to:
+1. Research AI news from sources
+2. Summarize key updates
+3. Update `updates.json`
+4. Commit and push
+5. Site rebuilds automatically

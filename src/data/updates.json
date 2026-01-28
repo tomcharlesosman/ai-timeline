@@ -1,0 +1,47 @@
+[
+  {
+    "id": "2026-01-28-1",
+    "date": "2026-01-28",
+    "title": "Kimi K2.5 Released",
+    "description": "New coding-focused model with 256K context window and improved tool use capabilities. Features enhanced reasoning for complex engineering tasks.",
+    "source": "Moonshot AI",
+    "url": "https://www.moonshot.cn",
+    "category": "model"
+  },
+  {
+    "id": "2026-01-28-2",
+    "date": "2026-01-28",
+    "title": "Anthropic Research: Constitutional AI v2",
+    "description": "Updated framework for AI alignment showing 40% improvement in safety benchmarks while maintaining performance on standard tasks.",
+    "source": "Anthropic",
+    "url": "https://www.anthropic.com",
+    "category": "research"
+  },
+  {
+    "id": "2026-01-27-1",
+    "date": "2026-01-27",
+    "title": "Google DeepMind: New Multimodal Architecture",
+    "description": "Unified model processes text, image, audio, and video in single forward pass. Claims 3x efficiency improvement over separate pipelines.",
+    "source": "Google",
+    "url": "https://deepmind.google",
+    "category": "lab"
+  },
+  {
+    "id": "2026-01-27-2",
+    "date": "2026-01-27",
+    "title": "OpenAI GPT-4.5 Research Preview",
+    "description": "Limited preview launched for enterprise customers. Focuses on improved coding accuracy and longer context coherence.",
+    "source": "OpenAI",
+    "url": "https://openai.com",
+    "category": "model"
+  },
+  {
+    "id": "2026-01-26-1",
+    "date": "2026-01-26",
+    "title": "Stability AI Open Sources New Image Model",
+    "description": "SD-XL 2.0 released with improved text rendering and composition. Apache 2.0 license.",
+    "source": "Stability AI",
+    "url": "https://stability.ai",
+    "category": "model"
+  }
+]
