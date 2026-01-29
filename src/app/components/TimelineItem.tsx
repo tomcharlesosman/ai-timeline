@@ -16,10 +16,10 @@ const categoryLabels: Record<Update["category"], string> = {
 };
 
 const categoryColors: Record<Update["category"], string> = {
-  model: "bg-accent text-white",
-  lab: "bg-foreground text-background",
-  research: "bg-muted text-background",
-  product: "bg-border text-foreground",
+  model: "bg-emerald-600 text-white",
+  lab: "bg-blue-600 text-white",
+  research: "bg-amber-600 text-white",
+  product: "bg-rose-600 text-white",
 };
 
 function addUtmParams(url: string, source: string): string {
