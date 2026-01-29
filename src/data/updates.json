@@ -1,5 +1,50 @@
 [
   {
+    "id": "2026-01-29-1",
+    "date": "2026-01-29",
+    "title": "Anthropic CEO Warns: 'The Adolescence of Technology'",
+    "description": "Dario Amodei publishes 19,000-word essay warning humanity is entering a 'rite of passage' that will 'test who we are as a species'. States powerful AI systems could be 1-2 years away and the world is 'considerably closer to real danger' than in 2023.",
+    "source": "The Guardian",
+    "url": "https://www.theguardian.com/technology/2026/jan/27/wake-up-to-the-risks-of-ai-they-are-almost-here-anthropic-boss-warns",
+    "category": "research"
+  },
+  {
+    "id": "2026-01-29-2",
+    "date": "2026-01-29",
+    "title": "OpenAI Introduces Prism for Scientific Research",
+    "description": "New LaTeX-native workspace designed to assist scientists with research and writing. Targets academic users needing sophisticated document preparation alongside AI assistance.",
+    "source": "OpenAI",
+    "url": "https://en.wikipedia.org/wiki/OpenAI",
+    "category": "product"
+  },
+  {
+    "id": "2026-01-29-3",
+    "date": "2026-01-29",
+    "title": "Model Context Protocol Gains Major Adoption",
+    "description": "MCP sees rapid uptake by OpenAI, Google DeepMind, and toolmakers like Zed and Sourcegraph. Protocol addresses growing demand for contextually-aware AI agents capable of pulling from diverse sources.",
+    "source": "The Verge",
+    "url": "https://en.wikipedia.org/wiki/Model_Context_Protocol",
+    "category": "research"
+  },
+  {
+    "id": "2026-01-29-4",
+    "date": "2026-01-29",
+    "title": "Anthropic Internal Conflict: Safety vs Speed",
+    "description": "The Atlantic reports on tensions within Anthropic between safety researchers and pressure to ship products faster. Safety researcher Sam Bowman: 'Things are moving uncomfortably fast.'",
+    "source": "The Atlantic",
+    "url": "https://www.theatlantic.com/technology/2026/01/anthropic-is-at-war-with-itself/684892/",
+    "category": "research"
+  },
+  {
+    "id": "2026-01-29-5",
+    "date": "2026-01-29",
+    "title": "Apple Developing AI Smart Glasses for 2026 Launch",
+    "description": "Apple working on smart glasses to rival Meta's AI Ray-Bans. Features include cameras, speakers, sensors, and AI integration, but no displays. Potential launch in 2026-2027 timeframe.",
+    "source": "MacRumors",
+    "url": "https://www.macrumors.com/guide/upcoming-apple-products/",
+    "category": "product"
+  },
+  {
     "id": "2026-01-28-1",
     "date": "2026-01-28",
     "title": "Kimi K2.5 Released",
