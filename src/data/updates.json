@@ -1,5 +1,23 @@
 [
   {
+    "id": "2026-01-30-11",
+    "date": "2026-01-30",
+    "title": "Anthropic-Google Cloud Partnership: 1 Million TPUs by 2026",
+    "description": "Anthropic announced cloud partnership with Google, gaining access to up to one million custom TPUs. Partnership will bring more than one gigawatt of AI compute capacity online by 2026.",
+    "source": "Wikipedia/Anthropic",
+    "url": "https://en.wikipedia.org/wiki/Anthropic",
+    "category": "market"
+  },
+  {
+    "id": "2026-01-30-12",
+    "date": "2026-01-30",
+    "title": "Anthropic CEO Warns: AI Could Be Misused for Biological Weapons",
+    "description": "Dario Amodei warned AI may soon be 'better than humans at almost everything.' The comments highlight growing concerns about frontier AI safety and potential misuse.",
+    "source": "NDTV",
+    "url": "https://www.ndtv.com/world-news/ai-models-could-be-misused-to-create-biological-weapons-warns-anthropic-ceo-dario-amodei-10911424",
+    "category": "research"
+  },
+  {
     "id": "2026-01-30-4",
     "date": "2026-01-30",
     "title": "Tesla Invests $2B in xAI",
