@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-02-01-4",
+    "date": "2026-02-01",
+    "title": "DeepMind Releases Project Genie",
+    "description": "DeepMind released Project Genie to AI Ultra Subscribers on January 29, 2026. New tool for AI development and research.",
+    "source": "Wikipedia/Google DeepMind",
+    "url": "https://en.wikipedia.org/wiki/Google_DeepMind",
+    "category": "product"
+  },
+  {
     "id": "2026-02-01-3",
     "date": "2026-02-01",
     "title": "OpenAI Acquires Torch for ~$60M",
