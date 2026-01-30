@@ -38,7 +38,7 @@
 - [ ] 21. Migrate updates.json to PostgreSQL database
 - [ ] 22. Add dark mode toggle to UI
 - [x] 23. Set up Google Analytics 4 tracking
-- [ ] 24. Create RSS feed for timeline entries
+- [x] 24. Create RSS feed for timeline entries
 - [ ] 25. Add search functionality (Elasticsearch)
 - [ ] 26. Implement filtering by category/company/date
 - [ ] 27. Add email subscription for weekly digest
@@ -167,6 +167,7 @@
 - [x] 2026-01-30: Add 7 new stories from Forward Future
 - [x] 2026-01-30: Create TASKS.md (this file)
 - [x] 2026-01-30: Add Vercel Analytics tracking (Task 23)
+- [x] 2026-01-30: Create RSS feed at /feed.xml (Task 24)
 
 ---
 
