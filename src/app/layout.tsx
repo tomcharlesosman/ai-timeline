@@ -16,6 +16,9 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "AI Timeline — What Happened Today",
   description: "Daily updates from the AI world. Models, labs, and breakthroughs. Automatically curated.",
+  alternates: {
+    'application/rss+xml': '/feed.xml',
+  },
 };
 
 export default function RootLayout({
