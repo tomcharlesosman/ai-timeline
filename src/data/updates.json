@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-02-01-2",
+    "date": "2026-02-01",
+    "title": "OpenAI Retiring GPT-4o, GPT-4.1 Models",
+    "description": "OpenAI retiring GPT-4o, GPT-4.1, GPT-4.1 mini, and o4-mini from ChatGPT on February 13th, 2026. Consolidation toward newer models.",
+    "source": "DEV Community",
+    "url": "https://dev.to/damogallagher/ai-news-roundup-openais-model-purge-anthropics-deskilling-study-and-the-rise-of-moltbot-4h05",
+    "category": "product"
+  },
+  {
     "id": "2026-02-01-1",
     "date": "2026-02-01",
     "title": "Apple Partners with Google for Gemini-Powered Siri",
