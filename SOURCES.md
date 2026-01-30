@@ -30,5 +30,13 @@
 ## GitHub Resource Lists
 - Awesome AI Newsletters: https://github.com/alternbits/awesome-ai-newsletters
 
+---
+
+## Tier 0 - Must Watch (Recommended by Tom)
+| Source | URL | Focus | Notes |
+|--------|-----|-------|-------|
+| **The Rundown AI** | https://www.therundown.ai/ | Daily AI news | #1 AI newsletter, 2M+ readers from Apple, OpenAI, NASA |
+| **Forward Future** | https://www.forwardfuture.ai/ | AI news & analysis | Matthew Berman's YouTube + newsletter, daily breakdowns |
+
 ## Last Updated
 2026-01-30
