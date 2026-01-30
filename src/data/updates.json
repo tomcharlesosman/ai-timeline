@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-02-01-3",
+    "date": "2026-02-01",
+    "title": "OpenAI Acquires Torch for ~$60M",
+    "description": "OpenAI acquired healthcare technology startup Torch for approximately $60 million. Expansion into healthcare AI.",
+    "source": "Wikipedia/OpenAI",
+    "url": "https://en.wikipedia.org/wiki/OpenAI",
+    "category": "market"
+  },
+  {
     "id": "2026-02-01-2",
     "date": "2026-02-01",
     "title": "OpenAI Retiring GPT-4o, GPT-4.1 Models",
