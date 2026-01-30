@@ -1,5 +1,32 @@
 [
   {
+    "id": "2026-01-30-1",
+    "date": "2026-01-30",
+    "title": "Microsoft Crashes 12% on AI CapEx Concerns",
+    "description": "Microsoft shares suffered worst drop since 2020 after reporting $37.5B quarterly AI CapEx (up 66% YoY) while Azure growth slowed to 39%. The market is punishing 'blind spending' on AI infrastructure, triggering sector-wide sell-off. Analysts point to 'DeepSeek Shock' as root cause - efficient Chinese models making $100B+ data center build-outs look like over-provisioning.",
+    "source": "AI Weekly",
+    "url": "https://aiweekly.co/",
+    "category": "market"
+  },
+  {
+    "id": "2026-01-30-2",
+    "date": "2026-01-30",
+    "title": "Nvidia Under US Scrutiny for Allegedly Helping DeepSeek",
+    "description": "Reports confirm Nvidia is under fresh US scrutiny for 'supporting' Chinese AI efficiency. According to NVIDIA records, Nvidia personnel helped DeepSeek achieve major training efficiency gains through 'optimized co-design of algorithms, frameworks, and hardware.' DeepSeek-V3 requires only 2.788M H800 GPU hours for full training - less than what U.S. developers typically require for frontier-scale models.",
+    "source": "Reuters",
+    "url": "https://www.reuters.com/world/china/nvidia-helped-deepseek-hone-ai-models-later-used-by-chinas-military-lawmaker-2026-01-28/",
+    "category": "research"
+  },
+  {
+    "id": "2026-01-30-3",
+    "date": "2026-01-30",
+    "title": "Pentagon Clashes with Anthropic Over Military AI Safeguards",
+    "description": "The Pentagon is at odds with Anthropic over safeguards that would prevent the government from deploying its technology to target weapons autonomously. The dispute highlights growing tensions between AI companies and military applications.",
+    "source": "MarketScreener",
+    "url": "https://www.marketscreener.com/news/pentagon-clashes-with-anthropic-over-military-ai-use-ce7e5bdfdc80f12c",
+    "category": "research"
+  },
+  {
     "id": "2026-01-29-1",
     "date": "2026-01-29",
     "title": "Anthropic CEO Warns: 'The Adolescence of Technology'",
