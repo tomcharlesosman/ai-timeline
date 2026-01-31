@@ -1,5 +1,14 @@
 [
   {
+    "id": "2025-12-04-1",
+    "date": "2025-12-04",
+    "title": "Google Gemini 3 Deep Think Released",
+    "description": "Google announced Gemini 3 Deep Think rolling out to Ultra subscribers. The Deep Think variant achieves 40%+ on Humanity's Last Exam benchmark, designed to challenge frontier AI systems. Combined with standard Gemini 3 Pro achieving 91.9% on GPQA Diamond, marking state-of-the-art reasoning performance.",
+    "source": "Vellum.ai / RDWorld",
+    "url": "https://www.vellum.ai/blog/google-gemini-3-benchmarks",
+    "category": "model"
+  },
+  {
     "id": "2026-01-31-1",
     "date": "2026-01-31",
     "title": "OpenAI GPT-5.3 'Garlic' Enters Final Validation",
