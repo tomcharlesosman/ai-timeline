@@ -1,6 +1,7 @@
 import Timeline from "./components/Timeline";
 import Header from "./components/Header";
 import EmailSubscription from "./components/EmailSubscription";
+import OnThisDay from "./components/OnThisDay";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
             What happened today in AI. Curated daily.
           </p>
         </div>
+        <OnThisDay />
         <EmailSubscription />
         <Timeline />
       </div>
