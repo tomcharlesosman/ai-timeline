@@ -52,7 +52,7 @@
 - [x] 33. Add social sharing buttons per entry (2026-01-31) — Twitter, LinkedIn, Copy link
 - [x] 34. Implement "On this day in AI" feature (2026-01-31) — Shows historical events from today's date
 - [x] 35. Create embeddable widget for other sites (2026-01-31) — iframe widget + documentation
-- [ ] 36. Add keyboard shortcuts for navigation
+- [x] 36. Add keyboard shortcuts for navigation (2026-01-31) — / for search, d for dark mode, j/k navigation
 - [ ] 37. Implement PWA for offline reading
 - [ ] 38. Create printable timeline view
 - [ ] 39. Add timeline zoom (day/week/month/year)
