@@ -1,5 +1,6 @@
 import Timeline from "./components/Timeline";
 import Header from "./components/Header";
+import EmailSubscription from "./components/EmailSubscription";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
             What happened today in AI. Curated daily.
           </p>
         </div>
+        <EmailSubscription />
         <Timeline />
       </div>
       <footer className="max-w-2xl mx-auto px-6 py-12 border-t border-border">
