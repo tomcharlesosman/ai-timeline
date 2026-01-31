@@ -150,8 +150,8 @@ export default function Timeline() {
   return (
     <div>
       {/* Filters */}
-      <div className="bg-card border border-border rounded-lg p-4 mb-8">
-        <div className="flex flex-wrap gap-4">
+      <div className="bg-card border border-border rounded-lg p-3 sm:p-4 mb-6 sm:mb-8">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
           {/* Search */}
           <div className="flex flex-col gap-1.5 flex-1 min-w-[200px]">
             <label className="text-xs font-medium text-muted">Search</label>

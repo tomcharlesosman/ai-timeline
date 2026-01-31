@@ -84,3 +84,80 @@ html {
   background: var(--accent);
   color: white;
 }
+
+/* Mobile Responsive Improvements */
+@media (max-width: 640px) {
+  /* Reduce padding on mobile */
+  .max-w-2xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Smaller headings on mobile */
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 0.875rem !important;
+  }
+  
+  /* Adjust timeline item padding */
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+  
+  /* Better touch targets for buttons */
+  button, 
+  select,
+  input {
+    min-height: 44px;
+  }
+  
+  /* Stack filter elements on mobile */
+  .flex-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .flex-wrap > * {
+    width: 100%;
+  }
+  
+  /* Adjust card padding */
+  .bg-card {
+    padding: 1rem;
+  }
+  
+  /* Smaller text for metadata */
+  .text-sm {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .max-w-2xl {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* Prevent text overflow */
+.timeline-item h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Improve touch targets on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .timeline-item::before {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+  
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
