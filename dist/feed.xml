@@ -2,14 +2,86 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AI Timeline</title>
-    <link>https://ai-timeline-mu.vercel.app</link>
+    <link>https://ai-timeline-omega.vercel.app</link>
     <description>Daily updates from the AI world. Models, labs, and breakthroughs.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Jan 2026 21:01:23 GMT</lastBuildDate>
-    <atom:link href="https://ai-timeline-mu.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 31 Jan 2026 10:56:30 GMT</lastBuildDate>
+    <atom:link href="https://ai-timeline-omega.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Gemini 3 Deep Think Released</title>
+      <link>https://ai-timeline-omega.vercel.app/#2025-12-04-1</link>
+      <guid isPermaLink="false">2025-12-04-1</guid>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Google announced Gemini 3 Deep Think rolling out to Ultra subscribers. The Deep Think variant achieves 40%+ on Humanity&apos;s Last Exam benchmark, designed to challenge frontier AI systems. Combined with standard Gemini 3 Pro achieving 91.9% on GPQA Diamond, marking state-of-the-art reasoning performance.</description>
+      <category>model</category>
+      <source url="https://www.vellum.ai/blog/google-gemini-3-benchmarks">Vellum.ai / RDWorld</source>
+    </item>
+    <item>
+      <title>OpenAI GPT-5.3 &apos;Garlic&apos; Enters Final Validation</title>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-31-1</link>
+      <guid isPermaLink="false">2026-01-31-1</guid>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 GMT</pubDate>
+      <description>GPT-5.3 &apos;Garlic&apos; is in final internal validation stages. Codenamed after Sam Altman&apos;s December 2025 &apos;Code Red&apos;, it represents a strategic shift toward &apos;cognitive density&apos; over raw scale. Designed for higher reasoning performance and inference efficiency rather than larger parameter counts. Response to Google Gemini 3 and Anthropic Claude Opus 4.5 competition.</description>
+      <category>model</category>
+      <source url="https://www.cometapi.com/gpt-5-3-%E2%80%9Cgarlic%E2%80%9D-a-a-comprehensive-preview-overview/">CometAPI</source>
+    </item>
+    <item>
+      <title>Claude Opus 4.5 and Claude Sonnet 4.5 Launch</title>
+      <link>https://ai-timeline-omega.vercel.app/#2025-12-25-1</link>
+      <guid isPermaLink="false">2025-12-25-1</guid>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Anthropic released Claude Opus 4.5 and Claude Sonnet 4.5, introducing advanced reasoning with focus on ethical AI and robust safety measures. Opus 4.5 excels in multi-step reasoning, real-world coding, and agent-based tasks. Sonnet 4.5 optimized for complex B2B workflows with enhanced coding capabilities and multi-file reasoning.</description>
+      <category>model</category>
+      <source url="https://www.promptitude.io/post/ultimate-2025-ai-language-models-comparison-gpt5-gpt-4-claude-gemini-sonar-more">Promptitude</source>
+    </item>
+    <item>
+      <title>Google Gemini 3 Pro Released</title>
+      <link>https://ai-timeline-omega.vercel.app/#2025-12-12-1</link>
+      <guid isPermaLink="false">2025-12-12-1</guid>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Google released Gemini 3 Pro with remarkable speed and multimodal features ideal for coding, rapid Q&amp;A, and generating mixed content types. The model shows strong improvements in pretraining and post-training, achieving 53.3% on OpenAI&apos;s GDPval benchmark.</description>
+      <category>model</category>
+      <source url="https://www.promptitude.io/post/ultimate-2025-ai-language-models-comparison-gpt5-gpt-4-claude-gemini-sonar-more">Promptitude</source>
+    </item>
+    <item>
+      <title>OpenAI Releases GPT-5.2</title>
+      <link>https://ai-timeline-omega.vercel.app/#2025-12-11-1</link>
+      <guid isPermaLink="false">2025-12-11-1</guid>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+      <description>OpenAI launched GPT-5.2 (codenamed &apos;Garlic&apos;), showing major performance improvements over GPT-5. The model achieved 70.9% on GDPval benchmark vs GPT-5&apos;s 38.8%, and 55.6% on SWE-Bench Pro coding benchmark. Released after Sam Altman issued &apos;code red&apos; to focus resources on core product improvements.</description>
+      <category>model</category>
+      <source url="https://fortune.com/2025/12/11/openai-gpt-5-2-launch-aims-to-silence-concerns-it-is-falling-behind-google-anthropic-code-red/">Fortune</source>
+    </item>
+    <item>
+      <title>India Govt to Provide AI Tools, GPUs to Universities</title>
+      <link>https://ai-timeline-omega.vercel.app/#2026-02-06-1</link>
+      <guid isPermaLink="false">2026-02-06-1</guid>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
+      <description>India&apos;s Electronics and IT Minister Ashwini Vaishnaw announced government will provide AI tools and GPUs to universities. Initiative to boost AI research and education across India.</description>
+      <category>policy</category>
+      <source url="https://www.business-standard.com/industry/news/govt-to-provide-ai-tools-gpus-to-universities-says-ashwini-vaishnaw-126013001522_1.html">Business Standard</source>
+    </item>
+    <item>
+      <title>Poetiq Raises $45.8M in Funding</title>
+      <link>https://ai-timeline-omega.vercel.app/#2026-02-04-1</link>
+      <guid isPermaLink="false">2026-02-04-1</guid>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Poetiq secured $45.8M in funding. The startup&apos;s technology pairs with frontier LLMs to make them learn faster and solve harder problems with fewer training examples.</description>
+      <category>market</category>
+      <source url="https://itdigest.com/artificial-intelligence/poetiq-secures-45-8-millions-outperforms-leading-llms/">IT Digest</source>
+    </item>
+    <item>
+      <title>DeepMind Releases Project Genie</title>
+      <link>https://ai-timeline-omega.vercel.app/#2026-02-01-4</link>
+      <guid isPermaLink="false">2026-02-01-4</guid>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+      <description>DeepMind released Project Genie to AI Ultra Subscribers on January 29, 2026. New tool for AI development and research.</description>
+      <category>product</category>
+      <source url="https://en.wikipedia.org/wiki/Google_DeepMind">Wikipedia/Google DeepMind</source>
+    </item>
     <item>
       <title>OpenAI Acquires Torch for ~$60M</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-02-01-3</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-02-01-3</link>
       <guid isPermaLink="false">2026-02-01-3</guid>
       <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
       <description>OpenAI acquired healthcare technology startup Torch for approximately $60 million. Expansion into healthcare AI.</description>
@@ -18,7 +90,7 @@
     </item>
     <item>
       <title>OpenAI Retiring GPT-4o, GPT-4.1 Models</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-02-01-2</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-02-01-2</link>
       <guid isPermaLink="false">2026-02-01-2</guid>
       <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
       <description>OpenAI retiring GPT-4o, GPT-4.1, GPT-4.1 mini, and o4-mini from ChatGPT on February 13th, 2026. Consolidation toward newer models.</description>
@@ -27,7 +99,7 @@
     </item>
     <item>
       <title>Apple Partners with Google for Gemini-Powered Siri</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-02-01-1</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-02-01-1</link>
       <guid isPermaLink="false">2026-02-01-1</guid>
       <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
       <description>Apple launching Gemini AI-powered Siri in February 2026 with iOS 26.4. Major shift in Apple&apos;s AI strategy, leveraging Google&apos;s model for more intelligent, context-aware voice assistant.</description>
@@ -36,7 +108,7 @@
     </item>
     <item>
       <title>Anthropic-Google Cloud Partnership: 1 Million TPUs by 2026</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-11</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-11</link>
       <guid isPermaLink="false">2026-01-30-11</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Anthropic announced cloud partnership with Google, gaining access to up to one million custom TPUs. Partnership will bring more than one gigawatt of AI compute capacity online by 2026.</description>
@@ -45,7 +117,7 @@
     </item>
     <item>
       <title>Anthropic CEO Warns: AI Could Be Misused for Biological Weapons</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-12</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-12</link>
       <guid isPermaLink="false">2026-01-30-12</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Dario Amodei warned AI may soon be &apos;better than humans at almost everything.&apos; The comments highlight growing concerns about frontier AI safety and potential misuse.</description>
@@ -54,7 +126,7 @@
     </item>
     <item>
       <title>Tesla Invests $2B in xAI</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-4</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-4</link>
       <guid isPermaLink="false">2026-01-30-4</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Tesla invested $2 billion in Elon Musk&apos;s AI startup xAI as part of a broader $20 billion funding round. The transaction formalizes a symbiotic intelligence layer, embedding Grok&apos;s reasoning into Tesla&apos;s physical hardware. Marks a deeper shift toward AI and robotics as Tesla faces falling EV sales.</description>
@@ -63,7 +135,7 @@
     </item>
     <item>
       <title>Arcee Unveils 400B Open LLM Trinity</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-5</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-5</link>
       <guid isPermaLink="false">2026-01-30-5</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Tiny startup Arcee AI released Trinity 400B, a sparse Mixture-of-Experts model activating 13B parameters, built from scratch for $20M. Apache-licensed model aims to rival Meta&apos;s Llama 4 Maverick on coding, math, and reasoning benchmarks. Trained in six months, targeting developers seeking a permanently open U.S.-based alternative.</description>
@@ -72,7 +144,7 @@
     </item>
     <item>
       <title>Moltbot (Clawdbot) Goes Viral</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-6</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-6</link>
       <guid isPermaLink="false">2026-01-30-6</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Personal AI assistant Moltbot (formerly Clawdbot) went viral after promising to &apos;actually do things.&apos; Built by Austrian developer Peter Steinberger, the open-source project attracted 44,200 GitHub stars within weeks. Anthropic legal challenge forced name change. Cloudflare stock rose 14% premarket on buzz. Experts warn security risks.</description>
@@ -81,7 +153,7 @@
     </item>
     <item>
       <title>Google Chrome Adds Agentic AI Features</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-7</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-7</link>
       <guid isPermaLink="false">2026-01-30-7</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Google is rolling out deeper Gemini integration in Chrome with a persistent AI sidebar and early agentic features. The assistant can understand groups of tabs, answer questions about browsing context, and integrates &apos;Personal Intelligence&apos; to synthesize Gmail, Calendar, and Photos data for autonomous task execution.</description>
@@ -90,7 +162,7 @@
     </item>
     <item>
       <title>Amazon Cuts 16,000 Jobs Amid AI Push</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-8</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-8</link>
       <guid isPermaLink="false">2026-01-30-8</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Amazon announced fresh layoffs to reduce bureaucracy as it competes with Microsoft and Google in AI. About 9% of staff trimmed. The cuts come as the company accelerates AI investment.</description>
@@ -99,7 +171,7 @@
     </item>
     <item>
       <title>Waabi Raises $1B for Robotaxis</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-9</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-9</link>
       <guid isPermaLink="false">2026-01-30-9</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Autonomous trucking startup Waabi closed a $1 billion Series C to expand into robotaxis, intensifying competition in self-driving mobility.</description>
@@ -108,7 +180,7 @@
     </item>
     <item>
       <title>Robots Can Now See Through Glass</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-10</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-10</link>
       <guid isPermaLink="false">2026-01-30-10</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Researchers tested LingBot-Depth, an AI depth system helping robots handle reflective and transparent objects where normal cameras fail. Success rates jumped sharply in real-world trials. The system worked in mirror-filled gyms and glass lobbies using cheap consumer cameras, making previously impossible tasks achievable.</description>
@@ -117,7 +189,7 @@
     </item>
     <item>
       <title>Microsoft Crashes 12% on AI CapEx Concerns</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-1</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-1</link>
       <guid isPermaLink="false">2026-01-30-1</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Microsoft shares suffered worst drop since 2020 after reporting $37.5B quarterly AI CapEx (up 66% YoY) while Azure growth slowed to 39%. The market is punishing &apos;blind spending&apos; on AI infrastructure, triggering sector-wide sell-off. Analysts point to &apos;DeepSeek Shock&apos; as root cause - efficient Chinese models making $100B+ data center build-outs look like over-provisioning.</description>
@@ -126,7 +198,7 @@
     </item>
     <item>
       <title>Nvidia Under US Scrutiny for Allegedly Helping DeepSeek</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-2</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-2</link>
       <guid isPermaLink="false">2026-01-30-2</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>Reports confirm Nvidia is under fresh US scrutiny for &apos;supporting&apos; Chinese AI efficiency. According to NVIDIA records, Nvidia personnel helped DeepSeek achieve major training efficiency gains through &apos;optimized co-design of algorithms, frameworks, and hardware.&apos; DeepSeek-V3 requires only 2.788M H800 GPU hours for full training - less than what U.S. developers typically require for frontier-scale models.</description>
@@ -135,7 +207,7 @@
     </item>
     <item>
       <title>Pentagon Clashes with Anthropic Over Military AI Safeguards</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-30-3</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-30-3</link>
       <guid isPermaLink="false">2026-01-30-3</guid>
       <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
       <description>The Pentagon is at odds with Anthropic over safeguards that would prevent the government from deploying its technology to target weapons autonomously. The dispute highlights growing tensions between AI companies and military applications.</description>
@@ -144,7 +216,7 @@
     </item>
     <item>
       <title>Anthropic CEO Warns: &apos;The Adolescence of Technology&apos;</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-29-1</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-29-1</link>
       <guid isPermaLink="false">2026-01-29-1</guid>
       <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
       <description>Dario Amodei publishes 19,000-word essay warning humanity is entering a &apos;rite of passage&apos; that will &apos;test who we are as a species&apos;. States powerful AI systems could be 1-2 years away and the world is &apos;considerably closer to real danger&apos; than in 2023.</description>
@@ -153,7 +225,7 @@
     </item>
     <item>
       <title>OpenAI Introduces Prism for Scientific Research</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-29-2</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-29-2</link>
       <guid isPermaLink="false">2026-01-29-2</guid>
       <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
       <description>New LaTeX-native workspace designed to assist scientists with research and writing. Targets academic users needing sophisticated document preparation alongside AI assistance.</description>
@@ -162,7 +234,7 @@
     </item>
     <item>
       <title>Model Context Protocol Gains Major Adoption</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-29-3</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-29-3</link>
       <guid isPermaLink="false">2026-01-29-3</guid>
       <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
       <description>MCP sees rapid uptake by OpenAI, Google DeepMind, and toolmakers like Zed and Sourcegraph. Protocol addresses growing demand for contextually-aware AI agents capable of pulling from diverse sources.</description>
@@ -171,7 +243,7 @@
     </item>
     <item>
       <title>Anthropic Internal Conflict: Safety vs Speed</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-29-4</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-29-4</link>
       <guid isPermaLink="false">2026-01-29-4</guid>
       <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
       <description>The Atlantic reports on tensions within Anthropic between safety researchers and pressure to ship products faster. Safety researcher Sam Bowman: &apos;Things are moving uncomfortably fast.&apos;</description>
@@ -180,7 +252,7 @@
     </item>
     <item>
       <title>Apple Developing AI Smart Glasses for 2026 Launch</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-29-5</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-29-5</link>
       <guid isPermaLink="false">2026-01-29-5</guid>
       <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
       <description>Apple working on smart glasses to rival Meta&apos;s AI Ray-Bans. Features include cameras, speakers, sensors, and AI integration, but no displays. Potential launch in 2026-2027 timeframe.</description>
@@ -189,7 +261,7 @@
     </item>
     <item>
       <title>Kimi K2.5 Released</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-28-1</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-28-1</link>
       <guid isPermaLink="false">2026-01-28-1</guid>
       <pubDate>Wed, 28 Jan 2026 00:00:00 GMT</pubDate>
       <description>New coding-focused model with 256K context window and improved tool use capabilities. Features enhanced reasoning for complex engineering tasks.</description>
@@ -198,7 +270,7 @@
     </item>
     <item>
       <title>Anthropic Research: Constitutional AI v2</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-28-2</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-28-2</link>
       <guid isPermaLink="false">2026-01-28-2</guid>
       <pubDate>Wed, 28 Jan 2026 00:00:00 GMT</pubDate>
       <description>Updated framework for AI alignment showing 40% improvement in safety benchmarks while maintaining performance on standard tasks.</description>
@@ -207,7 +279,7 @@
     </item>
     <item>
       <title>Google DeepMind: New Multimodal Architecture</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-27-1</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-27-1</link>
       <guid isPermaLink="false">2026-01-27-1</guid>
       <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
       <description>Unified model processes text, image, audio, and video in single forward pass. Claims 3x efficiency improvement over separate pipelines.</description>
@@ -216,7 +288,7 @@
     </item>
     <item>
       <title>OpenAI GPT-4.5 Research Preview</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-27-2</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-27-2</link>
       <guid isPermaLink="false">2026-01-27-2</guid>
       <pubDate>Tue, 27 Jan 2026 00:00:00 GMT</pubDate>
       <description>Limited preview launched for enterprise customers. Focuses on improved coding accuracy and longer context coherence.</description>
@@ -225,7 +297,7 @@
     </item>
     <item>
       <title>Stability AI Open Sources New Image Model</title>
-      <link>https://ai-timeline-mu.vercel.app/#2026-01-26-1</link>
+      <link>https://ai-timeline-omega.vercel.app/#2026-01-26-1</link>
       <guid isPermaLink="false">2026-01-26-1</guid>
       <pubDate>Mon, 26 Jan 2026 00:00:00 GMT</pubDate>
       <description>SD-XL 2.0 released with improved text rendering and composition. Apache 2.0 license.</description>
