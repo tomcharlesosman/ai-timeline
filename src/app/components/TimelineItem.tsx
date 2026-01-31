@@ -5,7 +5,7 @@ interface Update {
   description: string;
   source: string;
   url?: string;
-  category: "model" | "lab" | "research" | "product";
+  category: "model" | "lab" | "research" | "product" | "market" | "policy";
 }
 
 const categoryLabels: Record<Update["category"], string> = {
@@ -13,6 +13,8 @@ const categoryLabels: Record<Update["category"], string> = {
   lab: "Lab",
   research: "Research",
   product: "Product",
+  market: "Market",
+  policy: "Policy",
 };
 
 const categoryColors: Record<Update["category"], string> = {
@@ -20,6 +22,8 @@ const categoryColors: Record<Update["category"], string> = {
   lab: "bg-blue-600 text-white",
   research: "bg-amber-600 text-white",
   product: "bg-rose-600 text-white",
+  market: "bg-violet-600 text-white",
+  policy: "bg-cyan-600 text-white",
 };
 
 function addUtmParams(url: string, source: string): string {
