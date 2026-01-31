@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-01-31-1",
+    "date": "2026-01-31",
+    "title": "OpenAI GPT-5.3 'Garlic' Enters Final Validation",
+    "description": "GPT-5.3 'Garlic' is in final internal validation stages. Codenamed after Sam Altman's December 2025 'Code Red', it represents a strategic shift toward 'cognitive density' over raw scale. Designed for higher reasoning performance and inference efficiency rather than larger parameter counts. Response to Google Gemini 3 and Anthropic Claude Opus 4.5 competition.",
+    "source": "CometAPI",
+    "url": "https://www.cometapi.com/gpt-5-3-%E2%80%9Cgarlic%E2%80%9D-a-a-comprehensive-preview-overview/",
+    "category": "model"
+  },
+  {
     "id": "2025-12-25-1",
     "date": "2025-12-25",
     "title": "Claude Opus 4.5 and Claude Sonnet 4.5 Launch",
