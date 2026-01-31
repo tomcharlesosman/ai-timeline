@@ -15,7 +15,7 @@
 6. [ ] **Create sponsorship packages** - $500/wk for newsletter mentions
 7. [ ] **Set up Buy Me a Coffee / Patreon** for supporters
 8. [ ] **Launch AI consulting directory** - take 10% commission on referrals
-9. [ ] **Sell dataset exports** - $99 for CSV of full timeline data
+9. [x] **Sell dataset exports** - $99 for CSV of full timeline data (2026-01-31)
 10. [ ] **Create white-label timeline** - $500/mo for enterprise licensing
 
 ### Growth Revenue (11-20)
@@ -172,6 +172,7 @@
 - [x] 2026-01-31: Implement filtering by category/source/date (Task 26)
 - [x] 2026-01-31: Add search functionality (Task 25)
 - [x] 2026-01-31: Add email subscription for weekly digest (Task 27)
+- [x] 2026-01-31: Sell dataset exports (Task 9) — Stripe checkout, /data page, $99 CSV export
 - [x] 2026-01-31: Create printable timeline view (Task 38) — Print page at /print with A4 layout
 - [x] 2026-01-31: Add timeline zoom (Task 39) — Day/Week/Month/Year view selector
 - [x] 2026-01-31: Create visual timeline (Task 40) — Horizontal scrolling timeline at /visual with neon node visualization
