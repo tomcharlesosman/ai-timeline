@@ -49,7 +49,7 @@
 ### Next Week
 - [x] 31. Add infinite scroll pagination (2026-01-31) — 10 items per page, IntersectionObserver, loading indicator
 - [x] 32. Create mobile responsive improvements (2026-01-31) — Responsive padding, touch targets, mobile typography
-- [ ] 33. Add social sharing buttons per entry
+- [x] 33. Add social sharing buttons per entry (2026-01-31) — Twitter, LinkedIn, Copy link
 - [ ] 34. Implement "On this day in AI" feature
 - [ ] 35. Create embeddable widget for other sites
 - [ ] 36. Add keyboard shortcuts for navigation
