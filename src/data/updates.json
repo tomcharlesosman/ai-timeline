@@ -1,5 +1,32 @@
 [
   {
+    "id": "2025-12-25-1",
+    "date": "2025-12-25",
+    "title": "Claude Opus 4.5 and Claude Sonnet 4.5 Launch",
+    "description": "Anthropic released Claude Opus 4.5 and Claude Sonnet 4.5, introducing advanced reasoning with focus on ethical AI and robust safety measures. Opus 4.5 excels in multi-step reasoning, real-world coding, and agent-based tasks. Sonnet 4.5 optimized for complex B2B workflows with enhanced coding capabilities and multi-file reasoning.",
+    "source": "Promptitude",
+    "url": "https://www.promptitude.io/post/ultimate-2025-ai-language-models-comparison-gpt5-gpt-4-claude-gemini-sonar-more",
+    "category": "model"
+  },
+  {
+    "id": "2025-12-12-1",
+    "date": "2025-12-12",
+    "title": "Google Gemini 3 Pro Released",
+    "description": "Google released Gemini 3 Pro with remarkable speed and multimodal features ideal for coding, rapid Q&A, and generating mixed content types. The model shows strong improvements in pretraining and post-training, achieving 53.3% on OpenAI's GDPval benchmark.",
+    "source": "Promptitude",
+    "url": "https://www.promptitude.io/post/ultimate-2025-ai-language-models-comparison-gpt5-gpt-4-claude-gemini-sonar-more",
+    "category": "model"
+  },
+  {
+    "id": "2025-12-11-1",
+    "date": "2025-12-11",
+    "title": "OpenAI Releases GPT-5.2",
+    "description": "OpenAI launched GPT-5.2 (codenamed 'Garlic'), showing major performance improvements over GPT-5. The model achieved 70.9% on GDPval benchmark vs GPT-5's 38.8%, and 55.6% on SWE-Bench Pro coding benchmark. Released after Sam Altman issued 'code red' to focus resources on core product improvements.",
+    "source": "Fortune",
+    "url": "https://fortune.com/2025/12/11/openai-gpt-5-2-launch-aims-to-silence-concerns-it-is-falling-behind-google-anthropic-code-red/",
+    "category": "model"
+  },
+  {
     "id": "2026-02-06-1",
     "date": "2026-02-06",
     "title": "India Govt to Provide AI Tools, GPUs to Universities",
