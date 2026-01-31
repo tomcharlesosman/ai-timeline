@@ -5,8 +5,80 @@
     <link>https://ai-timeline-mu.vercel.app</link>
     <description>Daily updates from the AI world. Models, labs, and breakthroughs.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 30 Jan 2026 21:01:23 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 31 Jan 2026 10:45:08 GMT</lastBuildDate>
     <atom:link href="https://ai-timeline-mu.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Google Gemini 3 Deep Think Released</title>
+      <link>https://ai-timeline-mu.vercel.app/#2025-12-04-1</link>
+      <guid isPermaLink="false">2025-12-04-1</guid>
+      <pubDate>Thu, 04 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Google announced Gemini 3 Deep Think rolling out to Ultra subscribers. The Deep Think variant achieves 40%+ on Humanity&apos;s Last Exam benchmark, designed to challenge frontier AI systems. Combined with standard Gemini 3 Pro achieving 91.9% on GPQA Diamond, marking state-of-the-art reasoning performance.</description>
+      <category>model</category>
+      <source url="https://www.vellum.ai/blog/google-gemini-3-benchmarks">Vellum.ai / RDWorld</source>
+    </item>
+    <item>
+      <title>OpenAI GPT-5.3 &apos;Garlic&apos; Enters Final Validation</title>
+      <link>https://ai-timeline-mu.vercel.app/#2026-01-31-1</link>
+      <guid isPermaLink="false">2026-01-31-1</guid>
+      <pubDate>Sat, 31 Jan 2026 00:00:00 GMT</pubDate>
+      <description>GPT-5.3 &apos;Garlic&apos; is in final internal validation stages. Codenamed after Sam Altman&apos;s December 2025 &apos;Code Red&apos;, it represents a strategic shift toward &apos;cognitive density&apos; over raw scale. Designed for higher reasoning performance and inference efficiency rather than larger parameter counts. Response to Google Gemini 3 and Anthropic Claude Opus 4.5 competition.</description>
+      <category>model</category>
+      <source url="https://www.cometapi.com/gpt-5-3-%E2%80%9Cgarlic%E2%80%9D-a-a-comprehensive-preview-overview/">CometAPI</source>
+    </item>
+    <item>
+      <title>Claude Opus 4.5 and Claude Sonnet 4.5 Launch</title>
+      <link>https://ai-timeline-mu.vercel.app/#2025-12-25-1</link>
+      <guid isPermaLink="false">2025-12-25-1</guid>
+      <pubDate>Thu, 25 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Anthropic released Claude Opus 4.5 and Claude Sonnet 4.5, introducing advanced reasoning with focus on ethical AI and robust safety measures. Opus 4.5 excels in multi-step reasoning, real-world coding, and agent-based tasks. Sonnet 4.5 optimized for complex B2B workflows with enhanced coding capabilities and multi-file reasoning.</description>
+      <category>model</category>
+      <source url="https://www.promptitude.io/post/ultimate-2025-ai-language-models-comparison-gpt5-gpt-4-claude-gemini-sonar-more">Promptitude</source>
+    </item>
+    <item>
+      <title>Google Gemini 3 Pro Released</title>
+      <link>https://ai-timeline-mu.vercel.app/#2025-12-12-1</link>
+      <guid isPermaLink="false">2025-12-12-1</guid>
+      <pubDate>Fri, 12 Dec 2025 00:00:00 GMT</pubDate>
+      <description>Google released Gemini 3 Pro with remarkable speed and multimodal features ideal for coding, rapid Q&amp;A, and generating mixed content types. The model shows strong improvements in pretraining and post-training, achieving 53.3% on OpenAI&apos;s GDPval benchmark.</description>
+      <category>model</category>
+      <source url="https://www.promptitude.io/post/ultimate-2025-ai-language-models-comparison-gpt5-gpt-4-claude-gemini-sonar-more">Promptitude</source>
+    </item>
+    <item>
+      <title>OpenAI Releases GPT-5.2</title>
+      <link>https://ai-timeline-mu.vercel.app/#2025-12-11-1</link>
+      <guid isPermaLink="false">2025-12-11-1</guid>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+      <description>OpenAI launched GPT-5.2 (codenamed &apos;Garlic&apos;), showing major performance improvements over GPT-5. The model achieved 70.9% on GDPval benchmark vs GPT-5&apos;s 38.8%, and 55.6% on SWE-Bench Pro coding benchmark. Released after Sam Altman issued &apos;code red&apos; to focus resources on core product improvements.</description>
+      <category>model</category>
+      <source url="https://fortune.com/2025/12/11/openai-gpt-5-2-launch-aims-to-silence-concerns-it-is-falling-behind-google-anthropic-code-red/">Fortune</source>
+    </item>
+    <item>
+      <title>India Govt to Provide AI Tools, GPUs to Universities</title>
+      <link>https://ai-timeline-mu.vercel.app/#2026-02-06-1</link>
+      <guid isPermaLink="false">2026-02-06-1</guid>
+      <pubDate>Fri, 06 Feb 2026 00:00:00 GMT</pubDate>
+      <description>India&apos;s Electronics and IT Minister Ashwini Vaishnaw announced government will provide AI tools and GPUs to universities. Initiative to boost AI research and education across India.</description>
+      <category>policy</category>
+      <source url="https://www.business-standard.com/industry/news/govt-to-provide-ai-tools-gpus-to-universities-says-ashwini-vaishnaw-126013001522_1.html">Business Standard</source>
+    </item>
+    <item>
+      <title>Poetiq Raises $45.8M in Funding</title>
+      <link>https://ai-timeline-mu.vercel.app/#2026-02-04-1</link>
+      <guid isPermaLink="false">2026-02-04-1</guid>
+      <pubDate>Wed, 04 Feb 2026 00:00:00 GMT</pubDate>
+      <description>Poetiq secured $45.8M in funding. The startup&apos;s technology pairs with frontier LLMs to make them learn faster and solve harder problems with fewer training examples.</description>
+      <category>market</category>
+      <source url="https://itdigest.com/artificial-intelligence/poetiq-secures-45-8-millions-outperforms-leading-llms/">IT Digest</source>
+    </item>
+    <item>
+      <title>DeepMind Releases Project Genie</title>
+      <link>https://ai-timeline-mu.vercel.app/#2026-02-01-4</link>
+      <guid isPermaLink="false">2026-02-01-4</guid>
+      <pubDate>Sun, 01 Feb 2026 00:00:00 GMT</pubDate>
+      <description>DeepMind released Project Genie to AI Ultra Subscribers on January 29, 2026. New tool for AI development and research.</description>
+      <category>product</category>
+      <source url="https://en.wikipedia.org/wiki/Google_DeepMind">Wikipedia/Google DeepMind</source>
+    </item>
     <item>
       <title>OpenAI Acquires Torch for ~$60M</title>
       <link>https://ai-timeline-mu.vercel.app/#2026-02-01-3</link>
