@@ -1,32 +1,25 @@
 import type { Metadata } from "next";
-import { Syne, Literata, Space_Mono } from "next/font/google";
+import { Source_Sans_3, Playfair_Display } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import KeyboardShortcuts from "./components/KeyboardShortcuts";
 import ServiceWorker from "./components/ServiceWorker";
 
-const syne = Syne({
+const sourceSans = Source_Sans_3({
   subsets: ["latin"],
-  variable: "--font-syne",
-  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-source",
+  weight: ["400", "600", "700"],
 });
 
-const literata = Literata({
+const playfair = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-literata",
-  weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
-});
-
-const spaceMono = Space_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  weight: ["400", "700"],
+  variable: "--font-tiempos",
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "AI TIMELINE — What Happened Today",
+  title: "AI Timeline — What Happened Today",
   description: "Daily updates from the AI world. Models, labs, and breakthroughs. Automatically curated.",
   alternates: {
     types: {
@@ -48,7 +41,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${syne.variable} ${literata.variable} ${spaceMono.variable}`}>
+    <html lang="en" className={`${sourceSans.variable} ${playfair.variable}`}>
       <body className="font-sans">
         <ThemeProvider>
           <KeyboardShortcuts />

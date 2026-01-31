@@ -53,14 +53,14 @@ export default function TimelineItem({ item }: { item: Update }) {
   const linkUrl = item.url ? addUtmParams(item.url, item.source) : undefined;
   
   return (
-    <article className="timeline-item group" id={item.id}>
+    <article className="group" id={item.id}>
       <span className={`category-badge ${categoryClasses[item.category]}`}>
         {item.category}
       </span>
       
-      <h3 className="font-[family-name:var(--font-syne)] text-xl sm:text-2xl font-semibold mb-3 leading-tight">
+      <h3 className="article-link mb-3">
         {linkUrl ? (
-          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="glitch-link hover:text-[#ff00ff] transition-colors">
+          <a href={linkUrl} target="_blank" rel="noopener noreferrer" className="hover:text-[--accent]">
             {item.title}
           </a>
         ) : (
@@ -68,19 +68,22 @@ export default function TimelineItem({ item }: { item: Update }) {
         )}
       </h3>
       
-      <p className="text-[#888] leading-relaxed mb-4 font-light">{item.description}</p>
+      <p className="text-[--text-secondary] leading-relaxed mb-4">
+        {item.description}
+      </p>
       
-      <div className="flex items-center justify-between">
-        <span className="font-mono text-xs text-[#555] tracking-wider">[{item.source.toUpperCase()}]</span>
+      <div className="flex items-center justify-between text-xs">
+        <span className="text-[--text-muted] font-medium uppercase tracking-wider">
+          {item.source}
+        </span>
         
-        {/* Social Sharing */}
-        <div className="flex items-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity">
           <a
             href={getShareUrl('twitter', item)}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-[#555] hover:text-[#ff00ff] transition-colors"
-            aria-label="Share on Twitter"
+            className="text-[--text-muted] hover:text-[--accent]"
+            aria-label="Share on X"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -90,7 +93,7 @@ export default function TimelineItem({ item }: { item: Update }) {
             href={getShareUrl('linkedin', item)}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 text-[#555] hover:text-[#ff00ff] transition-colors"
+            className="text-[--text-muted] hover:text-[--accent]"
             aria-label="Share on LinkedIn"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -99,7 +102,7 @@ export default function TimelineItem({ item }: { item: Update }) {
           </a>
           <button
             onClick={() => copyToClipboard(item)}
-            className="p-2 text-[#555] hover:text-[#ff00ff] transition-colors"
+            className="text-[--text-muted] hover:text-[--accent]"
             aria-label="Copy link"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

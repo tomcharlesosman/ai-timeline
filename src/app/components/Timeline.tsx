@@ -15,13 +15,13 @@ interface Update {
 }
 
 const CATEGORIES = [
-  { value: "all", label: "All", color: "bg-stone-600" },
-  { value: "model", label: "Models", color: "bg-emerald-600" },
-  { value: "lab", label: "Labs", color: "bg-blue-600" },
-  { value: "research", label: "Research", color: "bg-amber-600" },
-  { value: "product", label: "Products", color: "bg-rose-600" },
-  { value: "market", label: "Market", color: "bg-violet-600" },
-  { value: "policy", label: "Policy", color: "bg-cyan-600" },
+  { value: "all", label: "All Categories" },
+  { value: "model", label: "Models" },
+  { value: "lab", label: "Labs" },
+  { value: "research", label: "Research" },
+  { value: "product", label: "Products" },
+  { value: "market", label: "Market" },
+  { value: "policy", label: "Policy" },
 ] as const;
 
 const ITEMS_PER_PAGE = 10;
@@ -55,7 +55,7 @@ function formatZoomLabel(key: string, zoom: ZoomLevel): string {
     const [year, month] = key.split('-');
     return new Date(parseInt(year), parseInt(month) - 1).toLocaleDateString("en-US", { month: "long", year: "numeric" });
   }
-  return key; // year
+  return key;
 }
 
 export default function Timeline() {
@@ -69,13 +69,11 @@ export default function Timeline() {
   const [isLoading, setIsLoading] = useState(false);
   const loaderRef = useRef<HTMLDivElement>(null);
 
-  // Get unique sources for filter
   const sources = useMemo(() => {
     const allSources = (updates as Update[]).map(u => u.source);
     return [...new Set(allSources)].sort();
   }, []);
 
-  // Filter updates
   const filtered = useMemo(() => {
     return (updates as Update[]).filter(update => {
       if (category !== "all" && update.category !== category) return false;
@@ -92,12 +90,6 @@ export default function Timeline() {
     });
   }, [category, source, dateFrom, dateTo, search]);
 
-  // Reset visible count when filters or zoom change
-  useEffect(() => {
-    setVisibleCount(ITEMS_PER_PAGE);
-  }, [category, source, dateFrom, dateTo, search, zoom]);
-
-  // Group by zoom level
   const grouped = useMemo(() => {
     return filtered.reduce((acc, update) => {
       let key: string;
@@ -113,14 +105,16 @@ export default function Timeline() {
     }, {} as Record<string, Update[]>);
   }, [filtered, zoom]);
 
-  // Sort dates descending
+  useEffect(() => {
+    setVisibleCount(ITEMS_PER_PAGE);
+  }, [category, source, dateFrom, dateTo, search, zoom]);
+
   const sortedDates = useMemo(() => {
     return Object.keys(grouped).sort((a, b) => 
       new Date(b).getTime() - new Date(a).getTime()
     );
   }, [grouped]);
 
-  // Flatten items for pagination
   const allItems = useMemo(() => {
     const items: { date: string; item: Update }[] = [];
     sortedDates.forEach(date => {
@@ -131,16 +125,13 @@ export default function Timeline() {
     return items;
   }, [sortedDates, grouped]);
 
-  // Visible items
   const visibleItems = allItems.slice(0, visibleCount);
   const hasMore = visibleCount < allItems.length;
 
-  // Intersection observer for infinite scroll
   const handleObserver = useCallback((entries: IntersectionObserverEntry[]) => {
     const [target] = entries;
     if (target.isIntersecting && hasMore && !isLoading) {
       setIsLoading(true);
-      // Simulate loading delay for better UX
       setTimeout(() => {
         setVisibleCount(prev => Math.min(prev + ITEMS_PER_PAGE, allItems.length));
         setIsLoading(false);
@@ -168,12 +159,12 @@ export default function Timeline() {
     setDateFrom("");
     setDateTo("");
     setSearch("");
+    setZoom("day");
     setVisibleCount(ITEMS_PER_PAGE);
   };
 
   const hasFilters = category !== "all" || source !== "all" || dateFrom || dateTo || search;
 
-  // Group visible items by date for rendering
   const visibleGrouped = useMemo(() => {
     const grouped: Record<string, Update[]> = {};
     visibleItems.forEach(({ date, item }) => {
@@ -190,68 +181,41 @@ export default function Timeline() {
   return (
     <div>
       {/* Filters */}
-      <div className="bg-card border border-border rounded-lg p-3 sm:p-4 mb-6 sm:mb-8">
-        <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
-          {/* Search */}
+      <div className="filter-bar mb-8">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4">
           <div className="flex flex-col gap-1.5 flex-1 min-w-[200px]">
-            <label className="text-xs font-medium text-muted">Search</label>
-            <div className="relative">
-              <svg 
-                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <circle cx="11" cy="11" r="8" strokeWidth="2" />
-                <path strokeWidth="2" d="M21 21l-4.35-4.35" />
-              </svg>
-              <input
-                type="text"
-                placeholder="Search updates..."
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                className="w-full bg-background border border-border rounded pl-9 pr-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-              />
-            </div>
+            <label className="text-xs font-semibold text-[--text-muted] uppercase tracking-wider">Search</label>
+            <input
+              type="text"
+              placeholder="Search updates..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              className="w-full"
+            />
           </div>
 
-          {/* Zoom selector */}
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-muted">View</label>
-            <select
-              value={zoom}
-              onChange={(e) => setZoom(e.target.value as ZoomLevel)}
-              className="bg-background border border-border rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              <option value="day">Day</option>
-              <option value="week">Week</option>
-              <option value="month">Month</option>
-              <option value="year">Year</option>
+            <label className="text-xs font-semibold text-[--text-muted] uppercase tracking-wider">View</label>
+            <select value={zoom} onChange={(e) => setZoom(e.target.value as ZoomLevel)}>
+              <option value="day">By Day</option>
+              <option value="week">By Week</option>
+              <option value="month">By Month</option>
+              <option value="year">By Year</option>
             </select>
           </div>
 
-          {/* Category filter */}
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-muted">Category</label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value as typeof category)}
-              className="bg-background border border-border rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            >
+            <label className="text-xs font-semibold text-[--text-muted] uppercase tracking-wider">Category</label>
+            <select value={category} onChange={(e) => setCategory(e.target.value as typeof category)}>
               {CATEGORIES.map(cat => (
                 <option key={cat.value} value={cat.value}>{cat.label}</option>
               ))}
             </select>
           </div>
 
-          {/* Source filter */}
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-muted">Source</label>
-            <select
-              value={source}
-              onChange={(e) => setSource(e.target.value)}
-              className="bg-background border border-border rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent min-w-[140px]"
-            >
+            <label className="text-xs font-semibold text-[--text-muted] uppercase tracking-wider">Source</label>
+            <select value={source} onChange={(e) => setSource(e.target.value)}>
               <option value="all">All Sources</option>
               {sources.map(s => (
                 <option key={s} value={s}>{s}</option>
@@ -259,59 +223,29 @@ export default function Timeline() {
             </select>
           </div>
 
-          {/* Date range */}
-          <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-muted">From</label>
-            <input
-              type="date"
-              value={dateFrom}
-              onChange={(e) => setDateFrom(e.target.value)}
-              className="bg-background border border-border rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
-
-          <div className="flex flex-col gap-1.5">
-            <label className="text-xs font-medium text-muted">To</label>
-            <input
-              type="date"
-              value={dateTo}
-              onChange={(e) => setDateTo(e.target.value)}
-              className="bg-background border border-border rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
-            />
-          </div>
-
-          {/* Clear button */}
           {hasFilters && (
             <div className="flex items-end">
-              <button
-                onClick={clearFilters}
-                className="px-3 py-1.5 text-sm text-muted hover:text-foreground transition-colors"
-              >
-                Clear
+              <button onClick={clearFilters} className="text-xs font-semibold text-[--text-muted] hover:text-[--text-primary]">
+                Clear filters
               </button>
             </div>
           )}
         </div>
 
-        {/* Results count */}
-        <div className="mt-3 pt-3 border-t border-border text-xs text-muted flex justify-between">
-          <span>Showing {visibleItems.length} of {filtered.length} updates</span>
-          {filtered.length !== updates.length && (
-            <span>({updates.length} total in database)</span>
-          )}
+        <div className="mt-4 pt-4 border-t border-[--border] text-xs text-[--text-muted]">
+          Showing {visibleItems.length} of {filtered.length} updates
+          {filtered.length !== updates.length && ` (${updates.length} total)`}
         </div>
       </div>
 
       {/* Timeline */}
-      <div className="space-y-12">
+      <div className="space-y-16">
         {visibleDates.length === 0 ? (
-          <p className="text-stone-500 text-center py-8">No updates found matching your filters.</p>
+          <p className="text-[--text-muted] text-center py-12">No updates found matching your filters.</p>
         ) : (
           visibleDates.map((date) => (
-            <div key={date}>
-              <h2 className="font-display text-sm font-semibold text-muted uppercase tracking-wider mb-6">
-                {formatZoomLabel(date, zoom)}
-              </h2>
+            <div key={date} className="timeline-section">
+              <h2 className="timeline-date">{formatZoomLabel(date, zoom)}</h2>
               <div className="space-y-8">
                 {visibleGrouped[date].map((item) => (
                   <TimelineItem key={item.id} item={item} />
@@ -322,22 +256,14 @@ export default function Timeline() {
         )}
       </div>
 
-      {/* Loading indicator / Infinite scroll trigger */}
-      <div 
-        ref={loaderRef}
-        className="py-12 text-center"
-      >
+      {/* Loading indicator */}
+      <div ref={loaderRef} className="py-12 text-center">
         {isLoading ? (
-          <div className="flex items-center justify-center gap-3 text-muted">
-            <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-            <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-            <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
-            <span className="ml-2 text-sm">Loading more...</span>
-          </div>
+          <p className="text-sm text-[--text-muted]">Loading more...</p>
         ) : hasMore ? (
-          <p className="text-sm text-muted">Scroll for more</p>
+          <p className="text-sm text-[--text-muted]">Scroll for more</p>
         ) : visibleItems.length > 0 ? (
-          <p className="text-sm text-muted">End of timeline</p>
+          <p className="text-sm text-[--text-muted]">End of timeline</p>
         ) : null}
       </div>
     </div>
