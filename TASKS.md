@@ -39,7 +39,7 @@
 - [x] 22. Add dark mode toggle to UI (2026-01-31)
 - [x] 23. Set up Google Analytics 4 tracking
 - [x] 24. Create RSS feed for timeline entries
-- [x] 25. Add search functionality (Elasticsearch)
+- [x] 25. Add search functionality (2026-01-31)
 - [x] 26. Implement filtering by category/company/date (2026-01-31)
 - [ ] 27. Add email subscription for weekly digest
 - [ ] 28. Create staging environment on Vercel
@@ -170,6 +170,7 @@
 - [x] 2026-01-30: Create RSS feed at /feed.xml (Task 24)
 - [x] 2026-01-31: Add dark mode toggle to UI (Task 22)
 - [x] 2026-01-31: Implement filtering by category/source/date (Task 26)
+- [x] 2026-01-31: Add search functionality (Task 25)
 
 ---
 
