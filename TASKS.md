@@ -54,7 +54,7 @@
 - [x] 35. Create embeddable widget for other sites (2026-01-31) — iframe widget + documentation
 - [x] 36. Add keyboard shortcuts for navigation (2026-01-31) — / for search, d for dark mode, j/k navigation
 - [x] 37. Implement PWA for offline reading (2026-01-31) — Manifest, service worker, offline cache
-- [ ] 38. Create printable timeline view
+- [x] 38. Create printable timeline view (2026-01-31) — Print-optimized page at /print with A4 layout, auto-print dialog
 - [ ] 39. Add timeline zoom (day/week/month/year)
 - [ ] 40. Create visual timeline (horizontal scrolling)
 
@@ -172,6 +172,7 @@
 - [x] 2026-01-31: Implement filtering by category/source/date (Task 26)
 - [x] 2026-01-31: Add search functionality (Task 25)
 - [x] 2026-01-31: Add email subscription for weekly digest (Task 27)
+- [x] 2026-01-31: Create printable timeline view (Task 38) — Print page at /print with A4 layout
 
 ---
 
