@@ -3,6 +3,7 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
+import KeyboardShortcuts from "./components/KeyboardShortcuts";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="font-sans">
         <ThemeProvider>
+          <KeyboardShortcuts />
           {children}
         </ThemeProvider>
         <Analytics />
