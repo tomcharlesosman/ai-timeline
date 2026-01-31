@@ -25,6 +25,38 @@ const CATEGORIES = [
 ] as const;
 
 const ITEMS_PER_PAGE = 10;
+type ZoomLevel = "day" | "week" | "month" | "year";
+
+function getWeekKey(dateStr: string): string {
+  const date = new Date(dateStr);
+  const startOfYear = new Date(date.getFullYear(), 0, 1);
+  const weekNum = Math.ceil(((date.getTime() - startOfYear.getTime()) / 86400000 + startOfYear.getDay() + 1) / 7);
+  return `${date.getFullYear()}-W${String(weekNum).padStart(2, '0')}`;
+}
+
+function getMonthKey(dateStr: string): string {
+  const date = new Date(dateStr);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+}
+
+function getYearKey(dateStr: string): string {
+  return new Date(dateStr).getFullYear().toString();
+}
+
+function formatZoomLabel(key: string, zoom: ZoomLevel): string {
+  if (zoom === "day") {
+    return new Date(key).toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  }
+  if (zoom === "week") {
+    const [year, week] = key.split('-W');
+    return `Week ${week}, ${year}`;
+  }
+  if (zoom === "month") {
+    const [year, month] = key.split('-');
+    return new Date(parseInt(year), parseInt(month) - 1).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+  }
+  return key; // year
+}
 
 export default function Timeline() {
   const [category, setCategory] = useState<"all" | typeof CATEGORIES[number]["value"]>("all");
@@ -32,6 +64,7 @@ export default function Timeline() {
   const [dateFrom, setDateFrom] = useState<string>("");
   const [dateTo, setDateTo] = useState<string>("");
   const [search, setSearch] = useState<string>("");
+  const [zoom, setZoom] = useState<ZoomLevel>("day");
   const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
   const [isLoading, setIsLoading] = useState(false);
   const loaderRef = useRef<HTMLDivElement>(null);
@@ -59,19 +92,26 @@ export default function Timeline() {
     });
   }, [category, source, dateFrom, dateTo, search]);
 
-  // Reset visible count when filters change
+  // Reset visible count when filters or zoom change
   useEffect(() => {
     setVisibleCount(ITEMS_PER_PAGE);
-  }, [category, source, dateFrom, dateTo, search]);
+  }, [category, source, dateFrom, dateTo, search, zoom]);
 
-  // Group by date
+  // Group by zoom level
   const grouped = useMemo(() => {
     return filtered.reduce((acc, update) => {
-      if (!acc[update.date]) acc[update.date] = [];
-      acc[update.date].push(update);
+      let key: string;
+      switch (zoom) {
+        case "week": key = getWeekKey(update.date); break;
+        case "month": key = getMonthKey(update.date); break;
+        case "year": key = getYearKey(update.date); break;
+        default: key = update.date;
+      }
+      if (!acc[key]) acc[key] = [];
+      acc[key].push(update);
       return acc;
     }, {} as Record<string, Update[]>);
-  }, [filtered]);
+  }, [filtered, zoom]);
 
   // Sort dates descending
   const sortedDates = useMemo(() => {
@@ -175,6 +215,21 @@ export default function Timeline() {
             </div>
           </div>
 
+          {/* Zoom selector */}
+          <div className="flex flex-col gap-1.5">
+            <label className="text-xs font-medium text-muted">View</label>
+            <select
+              value={zoom}
+              onChange={(e) => setZoom(e.target.value as ZoomLevel)}
+              className="bg-background border border-border rounded px-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="year">Year</option>
+            </select>
+          </div>
+
           {/* Category filter */}
           <div className="flex flex-col gap-1.5">
             <label className="text-xs font-medium text-muted">Category</label>
@@ -255,12 +310,7 @@ export default function Timeline() {
           visibleDates.map((date) => (
             <div key={date}>
               <h2 className="font-display text-sm font-semibold text-muted uppercase tracking-wider mb-6">
-                {new Date(date).toLocaleDateString("en-US", {
-                  weekday: "long",
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+                {formatZoomLabel(date, zoom)}
               </h2>
               <div className="space-y-8">
                 {visibleGrouped[date].map((item) => (
