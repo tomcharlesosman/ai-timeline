@@ -1,0 +1,139 @@
+export default function WidgetPage() {
+  return (
+    <html>
+      <head>
+        <title>AI Timeline Widget</title>
+        <style dangerouslySetInnerHTML={{__html: `
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          :root {
+            --bg: #faf8f5;
+            --text: #1a1814;
+            --muted: #8a8680;
+            --accent: #e85d4c;
+            --border: #e5e2dc;
+          }
+          @media (prefers-color-scheme: dark) {
+            :root {
+              --bg: #1a1814;
+              --text: #faf8f5;
+              --muted: #8a8680;
+              --accent: #ff7b65;
+              --border: #3a3530;
+            }
+          }
+          body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding: 16px;
+            max-width: 400px;
+          }
+          .widget-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+          }
+          .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+          }
+          @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+          }
+          h3 {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+          }
+          .updates-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+          }
+          .update-item {
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: border-color 0.2s;
+          }
+          .update-item:hover {
+            border-color: var(--accent);
+          }
+          .category {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            margin-bottom: 6px;
+          }
+          .title {
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 1.4;
+            margin-bottom: 4px;
+          }
+          .title a {
+            color: var(--text);
+            text-decoration: none;
+          }
+          .title a:hover {
+            color: var(--accent);
+          }
+          .source {
+            font-size: 11px;
+            color: var(--muted);
+          }
+          .footer {
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+          }
+          .footer a {
+            font-size: 11px;
+            color: var(--muted);
+            text-decoration: none;
+          }
+          .footer a:hover {
+            color: var(--accent);
+          }
+        `}} />
+      </head>
+      <body>
+        <div className="widget-header">
+          <div className="dot" />
+          <h3>AI TIMELINE</h3>
+        </div>
+        <div className="updates-list">
+          <div className="update-item">
+            <span className="category">Model</span>
+            <p className="title"><a href="https://ai-timeline-omega.vercel.app" target="_blank">GPT-5.3 &quot;Garlic&quot; enters final validation</a></p>
+            <span className="source">OpenAI</span>
+          </div>
+          <div className="update-item">
+            <span className="category">Product</span>
+            <p className="title"><a href="https://ai-timeline-omega.vercel.app" target="_blank">Claude Opus 4.5 and Sonnet 4.5 launch</a></p>
+            <span className="source">Anthropic</span>
+          </div>
+          <div className="update-item">
+            <span className="category">Research</span>
+            <p className="title"><a href="https://ai-timeline-omega.vercel.app" target="_blank">Gemini 3 Deep Think released</a></p>
+            <span className="source">Google</span>
+          </div>
+        </div>
+        <div className="footer">
+          <a href="https://ai-timeline-omega.vercel.app" target="_blank">View full timeline →</a>
+        </div>
+      </body>
+    </html>
+  );
+}
