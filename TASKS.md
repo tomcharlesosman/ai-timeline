@@ -51,7 +51,7 @@
 - [x] 32. Create mobile responsive improvements (2026-01-31) — Responsive padding, touch targets, mobile typography
 - [x] 33. Add social sharing buttons per entry (2026-01-31) — Twitter, LinkedIn, Copy link
 - [x] 34. Implement "On this day in AI" feature (2026-01-31) — Shows historical events from today's date
-- [ ] 35. Create embeddable widget for other sites
+- [x] 35. Create embeddable widget for other sites (2026-01-31) — iframe widget + documentation
 - [ ] 36. Add keyboard shortcuts for navigation
 - [ ] 37. Implement PWA for offline reading
 - [ ] 38. Create printable timeline view
