@@ -42,7 +42,7 @@
 - [x] 25. Add search functionality (2026-01-31)
 - [x] 26. Implement filtering by category/company/date (2026-01-31)
 - [x] 27. Add email subscription for weekly digest (2026-01-31)
-- [ ] 28. Create staging environment on Vercel
+- [x] 28. Create staging environment on Vercel (2026-01-31) — Branch: `staging`, Preview deploys enabled
 - [ ] 29. Set up automated testing pipeline
 - [ ] 30. Add backup/restore system for data
 
