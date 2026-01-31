@@ -46,6 +46,9 @@ export default function Home() {
             AUTOMATICALLY UPDATED DAILY
           </p>
           <div className="flex gap-6">
+            <a href="/print" target="_blank" className="glitch-link font-mono text-xs text-[#888] hover:text-[#ff00ff]">
+              [PRINT]
+            </a>
             <a href="https://github.com/tomcharlesosman/ai-timeline" target="_blank" rel="noopener" className="glitch-link font-mono text-xs text-[#888] hover:text-[#ff00ff]">
               [GITHUB]
             </a>
