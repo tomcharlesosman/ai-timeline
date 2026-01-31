@@ -56,7 +56,7 @@
 - [x] 37. Implement PWA for offline reading (2026-01-31) — Manifest, service worker, offline cache
 - [x] 38. Create printable timeline view (2026-01-31) — Print-optimized page at /print with A4 layout, auto-print dialog
 - [x] 39. Add timeline zoom (day/week/month/year) (2026-01-31) — Day/Week/Month/Year selector in filter bar
-- [ ] 40. Create visual timeline (horizontal scrolling)
+- [x] 40. Create visual timeline (horizontal scrolling) (2026-01-31) — Interactive horizontal timeline at /visual with year filter
 
 ---
 
@@ -174,6 +174,7 @@
 - [x] 2026-01-31: Add email subscription for weekly digest (Task 27)
 - [x] 2026-01-31: Create printable timeline view (Task 38) — Print page at /print with A4 layout
 - [x] 2026-01-31: Add timeline zoom (Task 39) — Day/Week/Month/Year view selector
+- [x] 2026-01-31: Create visual timeline (Task 40) — Horizontal scrolling timeline at /visual with neon node visualization
 
 ---
 
