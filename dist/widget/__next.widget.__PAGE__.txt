@@ -104,7 +104,7 @@ b:"$Sreact.suspense"
           .footer a:hover {
             color: var(--accent);
           }
-        0:{"buildId":"IWExptfYqVjDRNqTWcXw3","rsc":["$","$1","c",{"children":[["$","html",null,{"children":[["$","head",null,{"children":[["$","title",null,{"children":"AI Timeline Widget"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"children":[["$","div",null,{"className":"widget-header","children":[["$","div",null,{"className":"dot"}],["$","h3",null,{"children":"AI TIMELINE"}]]}],["$","div",null,{"className":"updates-list","children":[["$","div",null,{"className":"update-item","children":["$L3","$L4","$L5"]}],"$L6","$L7"]}],"$L8"]}]]}],null,"$L9"]}],"loading":null,"isPartial":false}
+        0:{"buildId":"chVkvb9bmFgRTI-1dWQfl","rsc":["$","$1","c",{"children":[["$","html",null,{"children":[["$","head",null,{"children":[["$","title",null,{"children":"AI Timeline Widget"}],["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$2"}}]]}],["$","body",null,{"children":[["$","div",null,{"className":"widget-header","children":[["$","div",null,{"className":"dot"}],["$","h3",null,{"children":"AI TIMELINE"}]]}],["$","div",null,{"className":"updates-list","children":[["$","div",null,{"className":"update-item","children":["$L3","$L4","$L5"]}],"$L6","$L7"]}],"$L8"]}]]}],null,"$L9"]}],"loading":null,"isPartial":false}
 3:["$","span",null,{"className":"category","children":"Model"}]
 4:["$","p",null,{"className":"title","children":["$","a",null,{"href":"https://ai-timeline-omega.vercel.app","target":"_blank","children":"GPT-5.3 \"Garlic\" enters final validation"}]}]
 5:["$","span",null,{"className":"source","children":"OpenAI"}]
