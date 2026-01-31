@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import TimelineItem from "./TimelineItem";
 import updates from "../../data/updates.json";
 
@@ -24,12 +24,17 @@ const CATEGORIES = [
   { value: "policy", label: "Policy", color: "bg-cyan-600" },
 ] as const;
 
+const ITEMS_PER_PAGE = 10;
+
 export default function Timeline() {
   const [category, setCategory] = useState<"all" | typeof CATEGORIES[number]["value"]>("all");
   const [source, setSource] = useState<string>("all");
   const [dateFrom, setDateFrom] = useState<string>("");
   const [dateTo, setDateTo] = useState<string>("");
   const [search, setSearch] = useState<string>("");
+  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
+  const [isLoading, setIsLoading] = useState(false);
+  const loaderRef = useRef<HTMLDivElement>(null);
 
   // Get unique sources for filter
   const sources = useMemo(() => {
@@ -54,17 +59,68 @@ export default function Timeline() {
     });
   }, [category, source, dateFrom, dateTo, search]);
 
+  // Reset visible count when filters change
+  useEffect(() => {
+    setVisibleCount(ITEMS_PER_PAGE);
+  }, [category, source, dateFrom, dateTo, search]);
+
   // Group by date
-  const grouped = filtered.reduce((acc, update) => {
-    if (!acc[update.date]) acc[update.date] = [];
-    acc[update.date].push(update);
-    return acc;
-  }, {} as Record<string, Update[]>);
+  const grouped = useMemo(() => {
+    return filtered.reduce((acc, update) => {
+      if (!acc[update.date]) acc[update.date] = [];
+      acc[update.date].push(update);
+      return acc;
+    }, {} as Record<string, Update[]>);
+  }, [filtered]);
 
   // Sort dates descending
-  const sortedDates = Object.keys(grouped).sort((a, b) => 
-    new Date(b).getTime() - new Date(a).getTime()
-  );
+  const sortedDates = useMemo(() => {
+    return Object.keys(grouped).sort((a, b) => 
+      new Date(b).getTime() - new Date(a).getTime()
+    );
+  }, [grouped]);
+
+  // Flatten items for pagination
+  const allItems = useMemo(() => {
+    const items: { date: string; item: Update }[] = [];
+    sortedDates.forEach(date => {
+      grouped[date].forEach(item => {
+        items.push({ date, item });
+      });
+    });
+    return items;
+  }, [sortedDates, grouped]);
+
+  // Visible items
+  const visibleItems = allItems.slice(0, visibleCount);
+  const hasMore = visibleCount < allItems.length;
+
+  // Intersection observer for infinite scroll
+  const handleObserver = useCallback((entries: IntersectionObserverEntry[]) => {
+    const [target] = entries;
+    if (target.isIntersecting && hasMore && !isLoading) {
+      setIsLoading(true);
+      // Simulate loading delay for better UX
+      setTimeout(() => {
+        setVisibleCount(prev => Math.min(prev + ITEMS_PER_PAGE, allItems.length));
+        setIsLoading(false);
+      }, 300);
+    }
+  }, [hasMore, isLoading, allItems.length]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleObserver, {
+      root: null,
+      rootMargin: "100px",
+      threshold: 0
+    });
+
+    if (loaderRef.current) {
+      observer.observe(loaderRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, [handleObserver]);
 
   const clearFilters = () => {
     setCategory("all");
@@ -72,9 +128,24 @@ export default function Timeline() {
     setDateFrom("");
     setDateTo("");
     setSearch("");
+    setVisibleCount(ITEMS_PER_PAGE);
   };
 
   const hasFilters = category !== "all" || source !== "all" || dateFrom || dateTo || search;
+
+  // Group visible items by date for rendering
+  const visibleGrouped = useMemo(() => {
+    const grouped: Record<string, Update[]> = {};
+    visibleItems.forEach(({ date, item }) => {
+      if (!grouped[date]) grouped[date] = [];
+      grouped[date].push(item);
+    });
+    return grouped;
+  }, [visibleItems]);
+
+  const visibleDates = Object.keys(visibleGrouped).sort((a, b) => 
+    new Date(b).getTime() - new Date(a).getTime()
+  );
 
   return (
     <div>
@@ -168,17 +239,20 @@ export default function Timeline() {
         </div>
 
         {/* Results count */}
-        <div className="mt-3 pt-3 border-t border-border text-xs text-muted">
-          Showing {filtered.length} of {updates.length} updates
+        <div className="mt-3 pt-3 border-t border-border text-xs text-muted flex justify-between">
+          <span>Showing {visibleItems.length} of {filtered.length} updates</span>
+          {filtered.length !== updates.length && (
+            <span>({updates.length} total in database)</span>
+          )}
         </div>
       </div>
 
       {/* Timeline */}
       <div className="space-y-12">
-        {sortedDates.length === 0 ? (
+        {visibleDates.length === 0 ? (
           <p className="text-stone-500 text-center py-8">No updates found matching your filters.</p>
         ) : (
-          sortedDates.map((date) => (
+          visibleDates.map((date) => (
             <div key={date}>
               <h2 className="font-display text-sm font-semibold text-muted uppercase tracking-wider mb-6">
                 {new Date(date).toLocaleDateString("en-US", {
@@ -189,13 +263,32 @@ export default function Timeline() {
                 })}
               </h2>
               <div className="space-y-8">
-                {grouped[date].map((item) => (
+                {visibleGrouped[date].map((item) => (
                   <TimelineItem key={item.id} item={item} />
                 ))}
               </div>
             </div>
           ))
         )}
+      </div>
+
+      {/* Loading indicator / Infinite scroll trigger */}
+      <div 
+        ref={loaderRef}
+        className="py-12 text-center"
+      >
+        {isLoading ? (
+          <div className="flex items-center justify-center gap-3 text-muted">
+            <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+            <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+            <div className="w-2 h-2 bg-accent rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+            <span className="ml-2 text-sm">Loading more...</span>
+          </div>
+        ) : hasMore ? (
+          <p className="text-sm text-muted">Scroll for more</p>
+        ) : visibleItems.length > 0 ? (
+          <p className="text-sm text-muted">End of timeline</p>
+        ) : null}
       </div>
     </div>
   );
