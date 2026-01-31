@@ -43,7 +43,7 @@
 - [x] 26. Implement filtering by category/company/date (2026-01-31)
 - [x] 27. Add email subscription for weekly digest (2026-01-31)
 - [x] 28. Create staging environment on Vercel (2026-01-31) — Branch: `staging`, Preview deploys enabled
-- [ ] 29. Set up automated testing pipeline
+- [x] 29. Set up automated testing pipeline (2026-01-31) — Jest + React Testing Library + GitHub Actions
 - [ ] 30. Add backup/restore system for data
 
 ### Next Week
