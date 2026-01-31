@@ -41,7 +41,7 @@
 - [x] 24. Create RSS feed for timeline entries
 - [x] 25. Add search functionality (2026-01-31)
 - [x] 26. Implement filtering by category/company/date (2026-01-31)
-- [ ] 27. Add email subscription for weekly digest
+- [x] 27. Add email subscription for weekly digest (2026-01-31)
 - [ ] 28. Create staging environment on Vercel
 - [ ] 29. Set up automated testing pipeline
 - [ ] 30. Add backup/restore system for data
@@ -171,6 +171,7 @@
 - [x] 2026-01-31: Add dark mode toggle to UI (Task 22)
 - [x] 2026-01-31: Implement filtering by category/source/date (Task 26)
 - [x] 2026-01-31: Add search functionality (Task 25)
+- [x] 2026-01-31: Add email subscription for weekly digest (Task 27)
 
 ---
 
