@@ -29,6 +29,7 @@ export default function Timeline() {
   const [source, setSource] = useState<string>("all");
   const [dateFrom, setDateFrom] = useState<string>("");
   const [dateTo, setDateTo] = useState<string>("");
+  const [search, setSearch] = useState<string>("");
 
   // Get unique sources for filter
   const sources = useMemo(() => {
@@ -43,9 +44,15 @@ export default function Timeline() {
       if (source !== "all" && update.source !== source) return false;
       if (dateFrom && update.date < dateFrom) return false;
       if (dateTo && update.date > dateTo) return false;
+      if (search) {
+        const query = search.toLowerCase();
+        const matchTitle = update.title.toLowerCase().includes(query);
+        const matchDesc = update.description.toLowerCase().includes(query);
+        if (!matchTitle && !matchDesc) return false;
+      }
       return true;
     });
-  }, [category, source, dateFrom, dateTo]);
+  }, [category, source, dateFrom, dateTo, search]);
 
   // Group by date
   const grouped = filtered.reduce((acc, update) => {
@@ -64,15 +71,39 @@ export default function Timeline() {
     setSource("all");
     setDateFrom("");
     setDateTo("");
+    setSearch("");
   };
 
-  const hasFilters = category !== "all" || source !== "all" || dateFrom || dateTo;
+  const hasFilters = category !== "all" || source !== "all" || dateFrom || dateTo || search;
 
   return (
     <div>
       {/* Filters */}
       <div className="bg-card border border-border rounded-lg p-4 mb-8">
         <div className="flex flex-wrap gap-4">
+          {/* Search */}
+          <div className="flex flex-col gap-1.5 flex-1 min-w-[200px]">
+            <label className="text-xs font-medium text-muted">Search</label>
+            <div className="relative">
+              <svg 
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <circle cx="11" cy="11" r="8" strokeWidth="2" />
+                <path strokeWidth="2" d="M21 21l-4.35-4.35" />
+              </svg>
+              <input
+                type="text"
+                placeholder="Search updates..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full bg-background border border-border rounded pl-9 pr-3 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+              />
+            </div>
+          </div>
+
           {/* Category filter */}
           <div className="flex flex-col gap-1.5">
             <label className="text-xs font-medium text-muted">Category</label>
