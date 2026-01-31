@@ -46,6 +46,9 @@ export default function Home() {
             AUTOMATICALLY UPDATED DAILY
           </p>
           <div className="flex gap-6">
+            <a href="/data" className="glitch-link font-mono text-xs text-[#888] hover:text-[#ff00ff]">
+              [DATA]
+            </a>
             <a href="/visual" className="glitch-link font-mono text-xs text-[#888] hover:text-[#ff00ff]">
               [VISUAL]
             </a>
