@@ -38,11 +38,11 @@ export default function EmailSubscription() {
   };
 
   return (
-    <section className="bg-card border border-border rounded-lg p-6 mb-12">
-      <h3 className="font-display text-lg font-semibold mb-2">
-        Get weekly AI updates
+    <section className="article-card mt-16">
+      <h3 className="font-[family-name:var(--font-tiempos)] text-xl mb-2">
+        Weekly Digest
       </h3>
-      <p className="text-muted text-sm mb-4">
+      <p className="text-[--text-secondary] text-sm mb-6">
         Curated AI news delivered to your inbox every Sunday.
       </p>
 
@@ -53,24 +53,24 @@ export default function EmailSubscription() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="flex-1 bg-background border border-border rounded px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-accent"
+          className="flex-1"
         />
         <button
           type="submit"
           disabled={status === 'loading'}
-          className="px-6 py-2 bg-accent text-white text-sm font-medium rounded hover:bg-accent/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-6 py-2 bg-[--accent] text-white text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
         </button>
       </form>
 
       {message && (
-        <p className={`mt-3 text-sm ${status === 'error' ? 'text-red-500' : 'text-green-600'}`}>
+        <p className={`mt-3 text-sm ${status === 'error' ? 'text-[--accent]' : 'text-green-600'}`}>
           {message}
         </p>
       )}
 
-      <p className="mt-3 text-xs text-muted">
+      <p className="mt-3 text-xs text-[--text-muted]">
         No spam, ever. Unsubscribe anytime.
       </p>
     </section>

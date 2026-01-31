@@ -14,12 +14,12 @@ interface Update {
 }
 
 const categoryColors: Record<string, string> = {
-  model: '#ff00ff',
-  lab: '#00ffff',
-  research: '#ffff00',
-  product: '#ff4444',
-  market: '#44ff44',
-  policy: '#ffaa00',
+  model: '#c41e3a',
+  lab: '#1e40af',
+  research: '#854d0e',
+  product: '#166534',
+  market: '#7c3aed',
+  policy: '#9a3412',
 };
 
 export default function VisualTimeline() {
@@ -37,7 +37,6 @@ export default function VisualTimeline() {
       .sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
   }, [selectedYear]);
 
-  // Calculate positions for timeline
   const timelineData = useMemo(() => {
     if (filtered.length === 0) return [];
     
@@ -53,21 +52,18 @@ export default function VisualTimeline() {
   }, [filtered]);
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white overflow-hidden">
-      {/* Header */}
-      <header className="border-b border-[#222] px-4 sm:px-8 py-4 flex items-center justify-between sticky top-0 bg-[#050505]/95 backdrop-blur z-50">
-        <div className="flex items-center gap-3">
-          <div className="w-3 h-3 bg-[#ff00ff]" style={{ boxShadow: '0 0 10px #ff00ff' }} />
-          <span className="font-[family-name:var(--font-syne)] font-bold text-sm tracking-wider">
-            VISUAL<span className="text-[#ff00ff]">_</span>TIMELINE
-          </span>
+    <div className="min-h-screen overflow-hidden">
+      {/* Masthead */}
+      <header className="border-b border-[--border] px-4 sm:px-8 py-4 flex items-center justify-between sticky top-0 bg-[--bg-primary]/95 backdrop-blur z-50">
+        <div>
+          <h1 className="font-[family-name:var(--font-tiempos)] text-2xl">Visual Timeline</h1>
         </div>
         
         <div className="flex items-center gap-4">
           <select
             value={selectedYear}
             onChange={(e) => setSelectedYear(e.target.value)}
-            className="bg-[#111] border border-[#333] text-white px-3 py-1.5 text-sm font-mono focus:outline-none focus:border-[#ff00ff]"
+            className="bg-[--bg-card] border border-[--border] text-[--text-primary] px-3 py-1.5 text-sm focus:outline-none focus:border-[--text-muted]"
           >
             <option value="all">All Years</option>
             {years.map(y => (
@@ -75,8 +71,8 @@ export default function VisualTimeline() {
             ))}
           </select>
           
-          <a href="/" className="font-mono text-xs text-[#888] hover:text-[#ff00ff]">
-            [BACK]
+          <a href="/" className="text-xs font-semibold tracking-wider text-[--text-muted] hover:text-[--accent]">
+            BACK
           </a>
         </div>
       </header>
@@ -84,15 +80,15 @@ export default function VisualTimeline() {
       {/* Timeline Container */}
       <div className="relative h-[calc(100vh-72px)] flex flex-col">
         {/* Year markers */}
-        <div className="h-12 border-b border-[#222] flex items-center px-8 relative">
+        <div className="h-14 border-b border-[--border] flex items-center px-8 relative bg-[--bg-secondary]">
           {years.map(year => (
             <button
               key={year}
               onClick={() => setSelectedYear(year.toString())}
-              className={`absolute font-mono text-xs px-3 py-1 transition-colors ${
+              className={`absolute text-xs font-semibold tracking-wider px-3 py-1 transition-colors ${
                 selectedYear === year.toString() 
-                  ? 'text-[#ff00ff] bg-[#ff00ff]/10' 
-                  : 'text-[#555] hover:text-[#888]'
+                  ? 'text-[--accent] bg-[--accent-light]' 
+                  : 'text-[--text-muted] hover:text-[--text-primary]'
               }`}
               style={{ left: `${(years.indexOf(year) / (years.length - 1)) * 80 + 10}%` }}
             >
@@ -104,14 +100,14 @@ export default function VisualTimeline() {
         {/* Horizontal scroll area */}
         <div 
           ref={scrollRef}
-          className="flex-1 overflow-x-auto overflow-y-hidden relative"
+          className="flex-1 overflow-x-auto overflow-y-hidden relative bg-[--bg-secondary]"
           style={{ 
-            backgroundImage: 'linear-gradient(to right, #0a0a0a 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(to right, var(--border) 1px, transparent 1px)',
             backgroundSize: '100px 100%'
           }}
         >
           {/* Main timeline line */}
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff00ff]/50 to-transparent" style={{ width: '200%' }} />
+          <div className="absolute top-1/2 left-0 right-0 h-px bg-[--border]" style={{ width: '200%' }} />
           
           {/* Events */}
           <div className="relative h-full" style={{ width: 'max(200%, 2000px)', minWidth: '100vw' }}>
@@ -128,48 +124,41 @@ export default function VisualTimeline() {
                 >
                   {/* Connector line */}
                   <div 
-                    className="absolute left-1/2 w-px transition-all duration-300"
+                    className="absolute left-1/2 w-px bg-[--border]"
                     style={{
-                      backgroundColor: categoryColors[item.category],
-                      height: isTop ? '100px' : '100px',
+                      height: '100px',
                       top: isTop ? '100%' : 'auto',
                       bottom: isTop ? 'auto' : '100%',
-                      boxShadow: `0 0 10px ${categoryColors[item.category]}`,
                     }}
                   />
                   
                   {/* Dot */}
                   <div 
-                    className="w-4 h-4 rounded-full border-2 transition-all duration-300 group-hover:scale-150"
-                    style={{
-                      backgroundColor: '#050505',
-                      borderColor: categoryColors[item.category],
-                      boxShadow: `0 0 15px ${categoryColors[item.category]}`,
-                    }}
+                    className="w-4 h-4 rounded-full border-2 transition-all duration-300 group-hover:scale-125 bg-[--bg-primary]"
+                    style={{ borderColor: categoryColors[item.category] }}
                   />
                   
                   {/* Card */}
                   <div 
-                    className={`absolute left-1/2 -translate-x-1/2 w-64 p-4 bg-[#111] border transition-all duration-300 opacity-0 group-hover:opacity-100 pointer-events-none z-10 ${
+                    className={`absolute left-1/2 -translate-x-1/2 w-64 p-4 bg-[--bg-card] border border-[--border] shadow-lg transition-all duration-300 opacity-0 group-hover:opacity-100 pointer-events-none z-10 ${
                       isTop ? 'bottom-full mb-4' : 'top-full mt-4'
                     }`}
-                    style={{ borderColor: categoryColors[item.category] }}
                   >
                     <span 
-                      className="text-xs font-mono uppercase tracking-wider"
+                      className="text-xs font-semibold tracking-wider uppercase"
                       style={{ color: categoryColors[item.category] }}
                     >
                       {item.category}
                     </span>
-                    <p className="text-xs text-[#555] font-mono mt-1">{item.date}</p>
-                    <h3 className="font-semibold text-sm mt-2 leading-tight">{item.title}</h3>
-                    <p className="text-xs text-[#888] mt-2 line-clamp-3">{item.description}</p>
+                    <p className="text-xs text-[--text-muted] mt-1">{item.date}</p>
+                    <h3 className="font-[family-name:var(--font-tiempos)] text-base mt-2 leading-tight">{item.title}</h3>
+                    <p className="text-xs text-[--text-secondary] mt-2 line-clamp-3">{item.description}</p>
                     {item.url && (
                       <a 
                         href={item.url} 
                         target="_blank" 
                         rel="noopener"
-                        className="text-xs font-mono mt-3 block hover:underline"
+                        className="text-xs font-semibold mt-3 block hover:underline"
                         style={{ color: categoryColors[item.category] }}
                       >
                         Read more →
@@ -183,15 +172,15 @@ export default function VisualTimeline() {
         </div>
 
         {/* Legend */}
-        <div className="h-14 border-t border-[#222] flex items-center gap-6 px-8 overflow-x-auto">
-          <span className="font-mono text-xs text-[#555] whitespace-nowrap">LEGEND:</span>
+        <div className="h-14 border-t border-[--border] flex items-center gap-6 px-8 bg-[--bg-primary] overflow-x-auto">
+          <span className="text-xs text-[--text-muted] font-semibold tracking-wider whitespace-nowrap">LEGEND</span>
           {Object.entries(categoryColors).map(([cat, color]) => (
             <div key={cat} className="flex items-center gap-2 whitespace-nowrap">
               <div 
                 className="w-2 h-2 rounded-full" 
-                style={{ backgroundColor: color, boxShadow: `0 0 5px ${color}` }}
+                style={{ backgroundColor: color }}
               />
-              <span className="font-mono text-xs text-[#888] uppercase">{cat}</span>
+              <span className="text-xs text-[--text-secondary] uppercase">{cat}</span>
             </div>
           ))}
         </div>
@@ -202,14 +191,14 @@ export default function VisualTimeline() {
           height: 8px;
         }
         .overflow-x-auto::-webkit-scrollbar-track {
-          background: #111;
+          background: var(--bg-secondary);
         }
         .overflow-x-auto::-webkit-scrollbar-thumb {
-          background: #333;
+          background: var(--border);
           border-radius: 4px;
         }
         .overflow-x-auto::-webkit-scrollbar-thumb:hover {
-          background: #ff00ff;
+          background: var(--text-muted);
         }
       `}</style>
     </div>

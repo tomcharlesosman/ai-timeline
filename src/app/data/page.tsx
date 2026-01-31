@@ -23,98 +23,117 @@ export default function DataPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050505] text-white">
-      {/* Header */}
-      <header className="border-b border-[#222] px-4 sm:px-8 py-4 flex items-center justify-between sticky top-0 bg-[#050505]/95 backdrop-blur z-50">
-        <div className="flex items-center gap-3">
-          <div className="w-3 h-3 bg-[#ff00ff]" style={{ boxShadow: '0 0 10px #ff00ff' }} />
-          <span className="font-[family-name:var(--font-syne)] font-bold text-sm tracking-wider">
-            DATA<span className="text-[#ff00ff]">_</span>EXPORT
-          </span>
+    <div className="min-h-screen">
+      {/* Masthead */}
+      <header className="border-b border-[--border]">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8">
+          <div className="flex items-center justify-between py-4">
+            <div className="text-xs text-[--text-muted] font-semibold tracking-wider">
+              {new Date().toLocaleDateString("en-US", { 
+                weekday: "long", 
+                year: "numeric", 
+                month: "long", 
+                day: "numeric" 
+              })}
+            </div>
+            <a href="/" className="text-xs font-semibold tracking-wider text-[--text-muted] hover:text-[--accent]">
+              ← BACK TO TIMELINE
+            </a>
+          </div>
+          <h1 className="text-center text-4xl sm:text-5xl font-[family-name:var(--font-tiempos)] font-light tracking-tight py-6">
+            AI Timeline <span className="italic">Dataset</span>
+          </h1>
         </div>
-        <a href="/" className="font-mono text-xs text-[#888] hover:text-[#ff00ff]">[BACK]</a>
       </header>
 
       <main className="max-w-4xl mx-auto px-4 sm:px-8 py-16">
         <div className="text-center mb-16">
-          <h1 className="text-5xl sm:text-7xl font-bold mb-6 tracking-tight">
-            AI Timeline
-            <span className="block text-[#ff00ff]">Dataset</span>
-          </h1>
-          <p className="text-xl text-[#888] max-w-2xl mx-auto">
+          <p className="text-lg text-[--text-secondary] leading-relaxed max-w-2xl mx-auto">
             Complete structured data on AI developments. For researchers, analysts, and builders.
           </p>
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-3 gap-4 mb-16 border border-[#222] p-6">
+        <div className="grid grid-cols-3 gap-6 mb-16 border border-[--border] p-8 bg-[--bg-secondary]">
           <div className="text-center">
-            <div className="text-3xl font-bold text-[#ff00ff]">{entryCount.toLocaleString()}</div>
-            <div className="text-xs text-[#555] font-mono mt-1">ENTRIES</div>
+            <div className="text-4xl font-[family-name:var(--font-tiempos)] text-[--accent]">{entryCount.toLocaleString()}</div>
+            <div className="text-xs text-[--text-muted] font-semibold tracking-wider mt-2">ENTRIES</div>
           </div>
-          <div className="text-center border-x border-[#222]">
-            <div className="text-3xl font-bold text-[#00ffff]">6</div>
-            <div className="text-xs text-[#555] font-mono mt-1">CATEGORIES</div>
+          <div className="text-center border-x border-[--border]">
+            <div className="text-4xl font-[family-name:var(--font-tiempos)] text-[--text-primary]">6</div>
+            <div className="text-xs text-[--text-muted] font-semibold tracking-wider mt-2">CATEGORIES</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-[#ffff00]">CSV</div>
-            <div className="text-xs text-[#555] font-mono mt-1">FORMAT</div>
+            <div className="text-4xl font-[family-name:var(--font-tiempos)] text-[--text-primary]">CSV</div>
+            <div className="text-xs text-[--text-muted] font-semibold tracking-wider mt-2">FORMAT</div>
           </div>
         </div>
 
-        {/* What's included */}
-        <div className="border border-[#222] p-8 mb-12">
-          <h2 className="font-mono text-sm text-[#888] mb-6 tracking-wider">WHAT'S INCLUDED</h2>
-          <ul className="space-y-4">
-            {[
-              'All timeline entries with full metadata',
-              'Date, category, title, description, source, URL for each entry',
-              'Structured CSV format (easy import to Excel, Python, R)',
-              'Free updates for 1 year',
-              'Commercial use license included',
-            ].map((item, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <span className="text-[#ff00ff]">✓</span>
-                <span className="text-[#ccc]">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Pricing */}
-        <div className="border border-[#ff00ff] p-8 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 bg-[#ff00ff] text-black text-xs font-mono px-3 py-1">
-            ONE-TIME PURCHASE
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* What's included */}
+          <div className="article-card">
+            <h2 className="section-title mb-6">What's Included</h2>
+            <ul className="space-y-4">
+              {[
+                'All timeline entries with full metadata',
+                'Date, category, title, description, source, URL',
+                'Structured CSV (Excel, Python, R compatible)',
+                'Free updates for 1 year',
+                'Commercial use license',
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-[--text-secondary]">
+                  <span className="text-[--accent]">—</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-          <div className="text-6xl font-bold mb-2">$99</div>
-          <div className="text-sm text-[#888] mb-8">One-time payment • Updates for 1 year</div>
-          <button
-            onClick={handlePurchase}
-            disabled={loading}
-            className="w-full bg-[#ff00ff] text-black font-bold py-4 px-8 hover:bg-[#ff44ff] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-          >
-            {loading ? 'PROCESSING...' : 'BUY DATASET'}
-          </button>
-          <p className="text-xs text-[#555] mt-4 font-mono">
-            Secure payment via Stripe. Instant download after purchase.
-          </p>
+
+          {/* Pricing */}
+          <div className="article-card border-[--accent]">
+            <div className="text-xs font-semibold tracking-wider text-[--accent] mb-4">ONE-TIME PURCHASE</div>
+            <div className="text-6xl font-[family-name:var(--font-tiempos)] mb-2">$99</div>
+            <div className="text-sm text-[--text-muted] mb-8">Single payment • Updates for 1 year</div>
+            <button
+              onClick={handlePurchase}
+              disabled={loading}
+              className="w-full bg-[--accent] text-white font-semibold py-4 px-8 hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {loading ? 'Processing...' : 'Buy Dataset'}
+            </button>
+            <p className="text-xs text-[--text-muted] mt-4 text-center">
+              Secure payment via Stripe. Instant download.
+            </p>
+          </div>
         </div>
 
         {/* Use cases */}
-        <div className="mt-16 grid sm:grid-cols-2 gap-6">
-          {[
-            { title: 'Research', desc: 'Academic studies on AI development patterns' },
-            { title: 'Analysis', desc: 'Market intelligence and trend forecasting' },
-            { title: 'Startups', desc: 'Competitive analysis and timing strategy' },
-            { title: 'Investors', desc: 'Due diligence and sector tracking' },
-          ].map((use) => (
-            <div key={use.title} className="border border-[#222] p-6 hover:border-[#333] transition-colors">
-              <h3 className="font-bold text-lg mb-2">{use.title}</h3>
-              <p className="text-sm text-[#888]">{use.desc}</p>
-            </div>
-          ))}
+        <div className="mt-16">
+          <h2 className="section-title mb-8 text-center">Use Cases</h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {[
+              { title: 'Research', desc: 'Academic studies on AI development patterns' },
+              { title: 'Analysis', desc: 'Market intelligence and trend forecasting' },
+              { title: 'Startups', desc: 'Competitive analysis and timing strategy' },
+              { title: 'Investors', desc: 'Due diligence and sector tracking' },
+            ].map((use) => (
+              <div key={use.title} className="article-card">
+                <h3 className="font-[family-name:var(--font-tiempos)] text-xl mb-2">{use.title}</h3>
+                <p className="text-sm text-[--text-secondary]">{use.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-[--border] mt-20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-8 py-12 text-center">
+          <p className="text-xs text-[--text-muted]">
+            Questions? Contact <a href="mailto:tom@tomosman.com" className="text-[--accent]">tom@tomosman.com</a>
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
