@@ -47,7 +47,7 @@
 - [x] 30. Add backup/restore system for data (2026-01-31) — npm run backup / npm run restore
 
 ### Next Week
-- [ ] 31. Add infinite scroll pagination
+- [x] 31. Add infinite scroll pagination (2026-01-31) — 10 items per page, IntersectionObserver, loading indicator
 - [ ] 32. Create mobile responsive improvements
 - [ ] 33. Add social sharing buttons per entry
 - [ ] 34. Implement "On this day in AI" feature
