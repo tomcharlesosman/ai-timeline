@@ -1,23 +1,32 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Syne, Literata, Space_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import KeyboardShortcuts from "./components/KeyboardShortcuts";
 import ServiceWorker from "./components/ServiceWorker";
 
-const inter = Inter({
+const syne = Syne({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const spaceGrotesk = Space_Grotesk({
+const literata = Literata({
   subsets: ["latin"],
-  variable: "--font-space",
+  variable: "--font-literata",
+  weight: ["400", "500", "600"],
+  style: ["normal", "italic"],
+});
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "AI Timeline — What Happened Today",
+  title: "AI TIMELINE — What Happened Today",
   description: "Daily updates from the AI world. Models, labs, and breakthroughs. Automatically curated.",
   alternates: {
     types: {
@@ -39,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable}`}>
+    <html lang="en" className={`${syne.variable} ${literata.variable} ${spaceMono.variable}`}>
       <body className="font-sans">
         <ThemeProvider>
           <KeyboardShortcuts />
