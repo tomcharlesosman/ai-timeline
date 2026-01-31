@@ -36,7 +36,7 @@
 
 ### This Week
 - [ ] 21. Migrate updates.json to PostgreSQL database
-- [ ] 22. Add dark mode toggle to UI
+- [x] 22. Add dark mode toggle to UI (2026-01-31)
 - [x] 23. Set up Google Analytics 4 tracking
 - [x] 24. Create RSS feed for timeline entries
 - [ ] 25. Add search functionality (Elasticsearch)
@@ -168,6 +168,7 @@
 - [x] 2026-01-30: Create TASKS.md (this file)
 - [x] 2026-01-30: Add Vercel Analytics tracking (Task 23)
 - [x] 2026-01-30: Create RSS feed at /feed.xml (Task 24)
+- [x] 2026-01-31: Add dark mode toggle to UI (Task 22)
 
 ---
 
