@@ -162,6 +162,7 @@
 
 ## Completed Tasks
 - [x] 2026-01-30: Create SOURCES.md with newsletter monitoring sources
+- [x] 2026-02-01: Migrate updates.json to PostgreSQL database (Task 21) — SQLite for local, PostgreSQL for production
 - [x] 2026-01-30: Add Jan 30 market shock updates (Microsoft crash, etc.)
 - [x] 2026-01-30: Add Forward Future sources (Matthew Berman)
 - [x] 2026-01-30: Add 7 new stories from Forward Future
