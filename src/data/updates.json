@@ -295,5 +295,23 @@
     "source": "Stability AI",
     "url": "https://stability.ai",
     "category": "model"
+  },
+  {
+    "id": "2026-01-28-1",
+    "date": "2026-01-28",
+    "title": "AGAT Software Launches Pragatix Offline AI Platform",
+    "description": "Israeli startup AGAT Software launched Pragatix, enabling security, financial, and government organizations to run advanced LLMs completely offline. The platform addresses data leakage concerns by providing AI services with complete network isolation and an AI Firewall.",
+    "source": "Haaretz",
+    "url": "https://www.haaretz.com/haaretz-labels/2026-01-28/ty-article-labels/no-cloud-no-leaks-this-is-what-the-private-ai-revolution-looks-like/0000019c-03c3-d2b6-a3bc-6fe70d9f0000",
+    "category": "product"
+  },
+  {
+    "id": "2026-01-29-1",
+    "date": "2026-01-29",
+    "title": "Google DeepMind Releases Project Genie 2",
+    "description": "DeepMind released Project Genie 2, an AI model capable of generating interactive 3D worlds from text descriptions or images. The model offers higher-resolution world generations and maintains visual consistency for multiple minutes of generated content. Released to AI Ultra subscribers.",
+    "source": "Wikipedia / Google DeepMind",
+    "url": "https://deepmind.google",
+    "category": "model"
   }
 ]
