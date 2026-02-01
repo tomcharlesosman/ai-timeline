@@ -12,7 +12,8 @@
     "test:coverage": "jest --coverage",
     "backup": "./scripts/backup.sh",
     "restore": "./scripts/restore.sh",
-    "migrate": "tsx scripts/migrate-to-db.ts"
+    "migrate": "tsx scripts/migrate-to-db.ts",
+    "fetch-rss": "tsx scripts/fetch-rss.ts"
   },
   "dependencies": {
     "@stripe/stripe-js": "^8.7.0",
@@ -22,6 +23,7 @@
     "pg": "^8.18.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "rss-parser": "^3.13.0",
     "stripe": "^20.3.0"
   },
   "devDependencies": {
