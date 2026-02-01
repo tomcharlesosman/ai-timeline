@@ -64,7 +64,7 @@
 
 ### Data Collection (41-55)
 - [x] 41. Add RSS feed ingestion for 50+ AI blogs (2026-02-01) — npm run fetch-rss, 50+ sources configured
-42. [ ] Scrape arXiv CS.AI daily for new papers
+- [x] 42. Scrape arXiv CS.AI daily for new papers (2026-02-01) — npm run fetch-arxiv, 6 categories (cs.AI, cs.LG, cs.CL, cs.CV, cs.NE, stat.ML)
 43. [ ] Monitor OpenAI blog/announcements page
 44. [ ] Monitor Anthropic research blog
 45. [ ] Monitor Google DeepMind publications
@@ -163,7 +163,8 @@
 ## Completed Tasks
 - [x] 2026-01-30: Create SOURCES.md with newsletter monitoring sources
 - [x] 2026-02-01: Migrate updates.json to PostgreSQL database (Task 21)
-- [x] 2026-02-01: Add RSS feed ingestion for 50+ AI blogs (Task 41) — npm run fetch-rss, 50+ sources configured
+- [x] 2026-02-01: Add RSS feed ingestion for 50+ AI blogs (Task 41)
+- [x] 2026-02-01: Scrape arXiv CS.AI daily for new papers (Task 42) — 6 categories, 60+ papers ingested
 - [x] 2026-01-30: Add Jan 30 market shock updates (Microsoft crash, etc.)
 - [x] 2026-01-30: Add Forward Future sources (Matthew Berman)
 - [x] 2026-01-30: Add 7 new stories from Forward Future
