@@ -2,7 +2,6 @@
 
 import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import TimelineItem from "./TimelineItem";
-import updates from "../../data/updates.json";
 
 interface Update {
   id: string;
@@ -59,6 +58,8 @@ function formatZoomLabel(key: string, zoom: ZoomLevel): string {
 }
 
 export default function Timeline() {
+  const [updates, setUpdates] = useState<Update[]>([]);
+  const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState<"all" | typeof CATEGORIES[number]["value"]>("all");
   const [source, setSource] = useState<string>("all");
   const [dateFrom, setDateFrom] = useState<string>("");
@@ -69,13 +70,31 @@ export default function Timeline() {
   const [isLoading, setIsLoading] = useState(false);
   const loaderRef = useRef<HTMLDivElement>(null);
 
-  const sources = useMemo(() => {
-    const allSources = (updates as Update[]).map(u => u.source);
-    return [...new Set(allSources)].sort();
+  // Fetch updates from API
+  useEffect(() => {
+    async function fetchUpdates() {
+      try {
+        const res = await fetch('/api/updates');
+        if (res.ok) {
+          const data = await res.json();
+          setUpdates(data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch updates:', error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchUpdates();
   }, []);
 
+  const sources = useMemo(() => {
+    const allSources = updates.map(u => u.source);
+    return [...new Set(allSources)].sort();
+  }, [updates]);
+
   const filtered = useMemo(() => {
-    return (updates as Update[]).filter(update => {
+    return updates.filter(update => {
       if (category !== "all" && update.category !== category) return false;
       if (source !== "all" && update.source !== source) return false;
       if (dateFrom && update.date < dateFrom) return false;
@@ -88,7 +107,7 @@ export default function Timeline() {
       }
       return true;
     });
-  }, [category, source, dateFrom, dateTo, search]);
+  }, [updates, category, source, dateFrom, dateTo, search]);
 
   const grouped = useMemo(() => {
     return filtered.reduce((acc, update) => {
@@ -177,6 +196,14 @@ export default function Timeline() {
   const visibleDates = Object.keys(visibleGrouped).sort((a, b) => 
     new Date(b).getTime() - new Date(a).getTime()
   );
+
+  if (loading) {
+    return (
+      <div className="py-20 text-center">
+        <p className="text-[--text-muted]">Loading timeline...</p>
+      </div>
+    );
+  }
 
   return (
     <div>

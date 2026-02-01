@@ -5,7 +5,7 @@
     <link>https://ai-timeline-mu.vercel.app</link>
     <description>Daily updates from the AI world. Models, labs, and breakthroughs.</description>
     <language>en</language>
-    <lastBuildDate>Sat, 31 Jan 2026 22:55:14 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 01 Feb 2026 04:20:33 GMT</lastBuildDate>
     <atom:link href="https://ai-timeline-mu.vercel.app/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Google Gemini 3 Deep Think Released</title>
@@ -303,6 +303,24 @@
       <description>SD-XL 2.0 released with improved text rendering and composition. Apache 2.0 license.</description>
       <category>model</category>
       <source url="https://stability.ai">Stability AI</source>
+    </item>
+    <item>
+      <title>AGAT Software Launches Pragatix Offline AI Platform</title>
+      <link>https://ai-timeline-mu.vercel.app/#2026-01-28-1</link>
+      <guid isPermaLink="false">2026-01-28-1</guid>
+      <pubDate>Wed, 28 Jan 2026 00:00:00 GMT</pubDate>
+      <description>Israeli startup AGAT Software launched Pragatix, enabling security, financial, and government organizations to run advanced LLMs completely offline. The platform addresses data leakage concerns by providing AI services with complete network isolation and an AI Firewall.</description>
+      <category>product</category>
+      <source url="https://www.haaretz.com/haaretz-labels/2026-01-28/ty-article-labels/no-cloud-no-leaks-this-is-what-the-private-ai-revolution-looks-like/0000019c-03c3-d2b6-a3bc-6fe70d9f0000">Haaretz</source>
+    </item>
+    <item>
+      <title>Google DeepMind Releases Project Genie 2</title>
+      <link>https://ai-timeline-mu.vercel.app/#2026-01-29-1</link>
+      <guid isPermaLink="false">2026-01-29-1</guid>
+      <pubDate>Thu, 29 Jan 2026 00:00:00 GMT</pubDate>
+      <description>DeepMind released Project Genie 2, an AI model capable of generating interactive 3D worlds from text descriptions or images. The model offers higher-resolution world generations and maintains visual consistency for multiple minutes of generated content. Released to AI Ultra subscribers.</description>
+      <category>model</category>
+      <source url="https://deepmind.google">Wikipedia / Google DeepMind</source>
     </item>
   </channel>
 </rss>
