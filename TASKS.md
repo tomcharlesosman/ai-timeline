@@ -68,7 +68,7 @@
 - [x] 43. Monitor OpenAI blog/announcements page (2026-02-01) — npm run monitor-labs, 10 labs monitored (OpenAI, Anthropic, DeepMind, Meta AI, xAI, Mistral, DeepSeek, Cohere, AI21 Labs, Databricks)
 - [x] 44. Monitor Anthropic research blog (2026-02-01) — Already included in Task 43 lab monitoring
 - [x] 45. Monitor Google DeepMind publications (2026-02-01) — Already included in Task 43 lab monitoring
-46. [ ] Monitor Meta AI research
+- [x] 46. Monitor Meta AI research (2026-02-01) — Already included in Task 43 lab monitoring
 47. [ ] Add Twitter/X monitoring for AI researcher accounts
 48. [ ] Add YouTube transcript extraction for AI channels
 49. [ ] Monitor GitHub trending repos for AI projects
