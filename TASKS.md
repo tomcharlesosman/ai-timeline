@@ -35,7 +35,7 @@
 ## Next Up (Ready to Execute)
 
 ### This Week
-- [ ] 21. Migrate updates.json to PostgreSQL database
+- [x] 21. Migrate updates.json to PostgreSQL database (2026-02-01) — SQLite for local, PostgreSQL for production, npm run migrate
 - [x] 22. Add dark mode toggle to UI (2026-01-31)
 - [x] 23. Set up Google Analytics 4 tracking
 - [x] 24. Create RSS feed for timeline entries
