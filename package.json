@@ -14,7 +14,8 @@
     "restore": "./scripts/restore.sh",
     "migrate": "tsx scripts/migrate-to-db.ts",
     "fetch-rss": "tsx scripts/fetch-rss.ts",
-    "fetch-arxiv": "tsx scripts/fetch-arxiv.ts"
+    "fetch-arxiv": "tsx scripts/fetch-arxiv.ts",
+    "monitor-labs": "tsx scripts/monitor-labs.ts"
   },
   "dependencies": {
     "@stripe/stripe-js": "^8.7.0",
