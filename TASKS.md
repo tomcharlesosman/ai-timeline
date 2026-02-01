@@ -66,9 +66,8 @@
 - [x] 41. Add RSS feed ingestion for 50+ AI blogs (2026-02-01) — npm run fetch-rss, 50+ sources configured
 - [x] 42. Scrape arXiv CS.AI daily for new papers (2026-02-01) — npm run fetch-arxiv, 6 categories (cs.AI, cs.LG, cs.CL, cs.CV, cs.NE, stat.ML)
 - [x] 43. Monitor OpenAI blog/announcements page (2026-02-01) — npm run monitor-labs, 10 labs monitored (OpenAI, Anthropic, DeepMind, Meta AI, xAI, Mistral, DeepSeek, Cohere, AI21 Labs, Databricks)
-44. [ ] Monitor Anthropic research blog
-44. [ ] Monitor Anthropic research blog
-45. [ ] Monitor Google DeepMind publications
+- [x] 44. Monitor Anthropic research blog (2026-02-01) — Already included in Task 43 lab monitoring
+- [x] 45. Monitor Google DeepMind publications (2026-02-01) — Already included in Task 43 lab monitoring
 46. [ ] Monitor Meta AI research
 47. [ ] Add Twitter/X monitoring for AI researcher accounts
 48. [ ] Add YouTube transcript extraction for AI channels
